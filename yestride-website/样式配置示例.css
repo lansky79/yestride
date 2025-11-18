@@ -1,0 +1,138 @@
+/* ============================================
+   Yestride 网站样式配置示例
+   复制需要的配置到 index.html 的 <style> 标签中
+   ============================================ */
+
+/* ========== 方案1：当前默认配置（橙色主题） ========== */
+:root {
+    /* 主题色 */
+    --primary-color: #FF6B00;
+    --primary-dark: #E05E00;
+    --primary-light: #FFF4E6;
+    
+    /* 字体大小 */
+    --font-logo: 1.25rem;          /* 20px */
+    --font-company-name: 1rem;     /* 16px */
+    --font-nav-menu: 1rem;         /* 16px */
+    --font-cta-button: 0.875rem;   /* 14px */
+    --font-hero-title: 3rem;       /* 48px */
+    --font-hero-subtitle: 1.125rem;/* 18px */
+    --font-section-title: 1.875rem;/* 30px */
+    --font-card-title: 1.125rem;   /* 18px */
+    --font-body: 0.875rem;         /* 14px */
+    
+    /* 字重 */
+    --weight-logo: 700;
+    --weight-company-name: 600;
+    --weight-nav-menu: 400;
+}
+
+
+/* ========== 方案2：科技蓝主题 + 大字体 ========== */
+:root {
+    /* 主题色：科技蓝 */
+    --primary-color: #2563EB;
+    --primary-dark: #1D4ED8;
+    --primary-light: #EFF6FF;
+    
+    /* 字体大小：整体放大 */
+    --font-logo: 1.5rem;           /* 24px */
+    --font-company-name: 1.125rem; /* 18px */
+    --font-nav-menu: 1.125rem;     /* 18px */
+    --font-cta-button: 1rem;       /* 16px */
+    --font-hero-title: 3.5rem;     /* 56px */
+    --font-hero-subtitle: 1.25rem; /* 20px */
+    --font-section-title: 2.25rem; /* 36px */
+    --font-card-title: 1.25rem;    /* 20px */
+    --font-body: 1rem;             /* 16px */
+    
+    /* 字重 */
+    --weight-logo: 700;
+    --weight-company-name: 700;    /* 加粗 */
+    --weight-nav-menu: 500;        /* 稍粗 */
+}
+
+
+/* ========== 方案3：绿色主题 + 紧凑布局 ========== */
+:root {
+    /* 主题色：绿色 */
+    --primary-color: #10B981;
+    --primary-dark: #059669;
+    --primary-light: #F0FDF4;
+    
+    /* 字体大小：紧凑 */
+    --font-logo: 1rem;             /* 16px */
+    --font-company-name: 0.875rem; /* 14px */
+    --font-nav-menu: 0.875rem;     /* 14px */
+    --font-cta-button: 0.75rem;    /* 12px */
+    --font-hero-title: 2.5rem;     /* 40px */
+    --font-hero-subtitle: 1rem;    /* 16px */
+    --font-section-title: 1.5rem;  /* 24px */
+    --font-card-title: 1rem;       /* 16px */
+    --font-body: 0.875rem;         /* 14px */
+    
+    /* 字重 */
+    --weight-logo: 700;
+    --weight-company-name: 600;
+    --weight-nav-menu: 400;
+}
+
+
+/* ========== 方案4：紫色主题 + 醒目标题 ========== */
+:root {
+    /* 主题色：紫色 */
+    --primary-color: #8B5CF6;
+    --primary-dark: #7C3AED;
+    --primary-light: #F5F3FF;
+    
+    /* 字体大小：标题醒目 */
+    --font-logo: 1.5rem;           /* 24px */
+    --font-company-name: 1.125rem; /* 18px */
+    --font-nav-menu: 1rem;         /* 16px */
+    --font-cta-button: 0.875rem;   /* 14px */
+    --font-hero-title: 4rem;       /* 64px - 超大 */
+    --font-hero-subtitle: 1.25rem; /* 20px */
+    --font-section-title: 2.5rem;  /* 40px - 很大 */
+    --font-card-title: 1.25rem;    /* 20px */
+    --font-body: 0.875rem;         /* 14px */
+    
+    /* 字重 */
+    --weight-logo: 800;            /* 超粗 */
+    --weight-company-name: 700;
+    --weight-nav-menu: 500;
+}
+
+
+/* ========== 方案5：极简黑白 + 中等字体 ========== */
+:root {
+    /* 主题色：深灰（接近黑色） */
+    --primary-color: #1F2937;
+    --primary-dark: #111827;
+    --primary-light: #F3F4F6;
+    
+    /* 字体大小：适中 */
+    --font-logo: 1.25rem;          /* 20px */
+    --font-company-name: 1rem;     /* 16px */
+    --font-nav-menu: 1rem;         /* 16px */
+    --font-cta-button: 0.875rem;   /* 14px */
+    --font-hero-title: 3rem;       /* 48px */
+    --font-hero-subtitle: 1.125rem;/* 18px */
+    --font-section-title: 2rem;    /* 32px */
+    --font-card-title: 1.125rem;   /* 18px */
+    --font-body: 0.875rem;         /* 14px */
+    
+    /* 字重 */
+    --weight-logo: 700;
+    --weight-company-name: 600;
+    --weight-nav-menu: 400;
+}
+
+
+/* ============================================
+   使用方法：
+   1. 选择一个方案
+   2. 复制整个 :root { ... } 代码块
+   3. 粘贴到 index.html 的 <style> 标签中
+   4. 替换原有的 :root 配置
+   5. 保存并刷新浏览器查看效果
+   ============================================ */
