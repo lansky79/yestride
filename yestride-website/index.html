@@ -86,6 +86,48 @@
         header .container > div {
             position: relative;
         }
+        
+        /* ========== 全屏分屏布局 ========== */
+        /* Hero + Tech Stack 占满第一屏 */
+        #home {
+            min-height: calc(100vh - 64px); /* 100vh - header高度 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            padding-bottom: 80px; /* 为技术栏留出空间 */
+        }
+        
+        /* Tech Stack 固定在Hero底部 */
+        .tech-stack-section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        /* Hero内容容器 */
+        #home > .container {
+            margin-top: -40px; /* 微调，让内容更居中 */
+        }
+        
+        /* 产品、案例、关于我们各占一屏 */
+        #products, #cases, #about {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            #home, #products, #cases, #about {
+                min-height: auto;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
     </style>
 </head>
 
@@ -134,7 +176,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="py-12 md:py-20">
+    <section id="home" class="relative">
         <div class="container mx-auto px-4 text-center">
             <!-- NEW Badge -->
             <div class="inline-flex items-center text-white text-xs px-3 py-1 rounded-full mb-4" style="background-color: var(--primary-color)">
@@ -172,8 +214,8 @@
     </section>
 
     <!-- Tech Stack Section -->
-    <section class="py-8 bg-gray-50">
-        <div class="container mx-auto px-4">
+        <div class="tech-stack-section py-8 bg-gray-50">
+            <div class="container mx-auto px-4">
             <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
                 <div class="flex items-center">
                     <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
@@ -193,10 +235,11 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Products Section -->
-    <section id="products" class="py-16">
+    <section id="products">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-4">产品与服务</h2>
             
@@ -271,10 +314,10 @@
     </section>
 
     <!-- Cases Section -->
-    <section id="cases" class="py-16 bg-gray-50">
+    <section id="cases" class="bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4">成功案例</h2>
-            <p class="text-gray-600 text-center mb-12">部分已交付案例展示</p>
+            <h2 class="text-3xl font-bold text-center mb-4">案例展示</h2>
+           
 
             <!-- 案例轮播容器 -->
             <div class="relative">
@@ -421,13 +464,13 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16">
+    <section id="about">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">关于我们</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <!-- Advantage 1 -->
-                <div class="text-center">
+                <div class="card text-center">
                     <!-- 正常版：浅橘色背景 + 橙色图标 -->
                     <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary-light">
                         <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -443,7 +486,7 @@
                 </div>
 
                 <!-- Advantage 2 -->
-                <div class="text-center">
+                <div class="card text-center">
                     <!-- 正常版：浅橘色背景 + 橙色图标 -->
                     <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary-light">
                         <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -459,7 +502,7 @@
                 </div>
 
                 <!-- Advantage 3 -->
-                <div class="text-center">
+                <div class="card text-center">
                     <!-- 正常版：浅橘色背景 + 橙色图标 -->
                     <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary-light">
                         <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -497,6 +540,7 @@
             -->
 
             <!-- Process Section -->
+            <!-- 已注释：合作流程模块（与关于我们太近，显得拥挤）
             <div>
                 <h2 class="text-3xl font-bold text-center mb-12">合作流程</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -531,6 +575,7 @@
                     </div>
                 </div>
             </div>
+            -->
         </div>
     </section>
 
@@ -553,7 +598,7 @@
     <footer class="bg-gray-900 text-white py-6">
         <div class="container mx-auto px-4">
             <div class="text-center text-sm text-gray-400">
-                <p> 电话：400-xxx-xxxx | 邮箱：contact@yestride.com | 地址：四川省成都市双流区双燕路西段399号LACADIERE天际B栋41F01/08 | 蜀ICP备xxxxxxxx号</p>
+                <p> 电话：400-xxx-xxxx | 邮箱：info@yestride.com | 地址：四川省成都市双流区双燕路西段399号LACADIERE天际B栋41F01/08 | 蜀ICP备xxxxxxxx号</p>
             </div>
         </div>
     </footer>
