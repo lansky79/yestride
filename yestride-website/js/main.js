@@ -69,28 +69,26 @@ function initCasesCarousel() {
         return;
     }
     
-    let currentPage = 0;
-    const cardsPerPage = 3; // 每页显示3个案例
-    const totalPages = Math.ceil(totalCards / cardsPerPage);
+    let currentIndex = 0;
+    const cardsPerView = 3; // 每次显示3个案例
+    const maxIndex = totalCards - cardsPerView; // 最大滚动位置
     
-    // 创建指示器
+    // 创建指示器 - 短横线样式
     if (indicators) {
-        for (let i = 0; i < totalPages; i++) {
-            const dot = document.createElement('button');
-            dot.className = 'w-2 h-2 rounded-full transition-all';
-            dot.style.backgroundColor = i === 0 ? 'var(--primary-color)' : '#D1D5DB';
-            dot.addEventListener('click', () => goToPage(i));
-            indicators.appendChild(dot);
+        const totalIndicators = maxIndex + 1;
+        for (let i = 0; i < totalIndicators; i++) {
+            const indicator = document.createElement('div');
+            indicator.className = 'indicator';
+            if (i === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToIndex(i));
+            indicators.appendChild(indicator);
         }
     }
     
     // 更新显示
     function updateDisplay() {
-        const startIndex = currentPage * cardsPerPage;
-        const endIndex = startIndex + cardsPerPage;
-        
         cards.forEach((card, index) => {
-            if (index >= startIndex && index < endIndex) {
+            if (index >= currentIndex && index < currentIndex + cardsPerView) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';
@@ -99,44 +97,49 @@ function initCasesCarousel() {
         
         // 更新指示器
         if (indicators) {
-            const dots = indicators.querySelectorAll('button');
+            const dots = indicators.querySelectorAll('.indicator');
             dots.forEach((dot, index) => {
-                dot.style.backgroundColor = index === currentPage ? 'var(--primary-color)' : '#D1D5DB';
-                dot.style.width = index === currentPage ? '1.5rem' : '0.5rem';
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
             });
         }
         
         // 更新按钮状态
         if (prevBtn) {
-            prevBtn.disabled = currentPage === 0;
-            prevBtn.style.opacity = currentPage === 0 ? '0.5' : '1';
+            prevBtn.disabled = currentIndex === 0;
+            prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+            prevBtn.style.cursor = currentIndex === 0 ? 'not-allowed' : 'pointer';
         }
         if (nextBtn) {
-            nextBtn.disabled = currentPage === totalPages - 1;
-            nextBtn.style.opacity = currentPage === totalPages - 1 ? '0.5' : '1';
+            nextBtn.disabled = currentIndex === maxIndex;
+            nextBtn.style.opacity = currentIndex === maxIndex ? '0.5' : '1';
+            nextBtn.style.cursor = currentIndex === maxIndex ? 'not-allowed' : 'pointer';
         }
     }
     
-    // 跳转到指定页
-    function goToPage(page) {
-        currentPage = Math.max(0, Math.min(page, totalPages - 1));
+    // 跳转到指定索引
+    function goToIndex(index) {
+        currentIndex = Math.max(0, Math.min(index, maxIndex));
         updateDisplay();
     }
     
-    // 上一页
+    // 上一个
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
-            if (currentPage > 0) {
-                goToPage(currentPage - 1);
+            if (currentIndex > 0) {
+                goToIndex(currentIndex - 1);
             }
         });
     }
     
-    // 下一页
+    // 下一个
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
-            if (currentPage < totalPages - 1) {
-                goToPage(currentPage + 1);
+            if (currentIndex < maxIndex) {
+                goToIndex(currentIndex + 1);
             }
         });
     }
@@ -144,9 +147,9 @@ function initCasesCarousel() {
     // 键盘导航
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
-            goToPage(currentPage - 1);
+            goToIndex(currentIndex - 1);
         } else if (e.key === 'ArrowRight') {
-            goToPage(currentPage + 1);
+            goToIndex(currentIndex + 1);
         }
     });
     

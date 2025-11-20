@@ -14,9 +14,14 @@ html {
 
 /* 容器 */
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+/* 全局字体缩放到90% */
+html {
+    font-size: 14.4px; /* 16px * 0.9 = 14.4px */
 }
 
 /* 按钮样式 */
@@ -54,14 +59,16 @@ html {
 /* 卡片样式 */
 .card {
     background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
 }
 
 .card:hover {
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15);
+    transform: translateY(-4px);
 }
 
 /* 图标背景 */
@@ -90,6 +97,41 @@ html {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+/* Header 和 Footer 悬停效果 */
+header:hover {
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.1) !important;
+}
+
+footer:hover {
+    box-shadow: 0 -4px 12px rgba(255, 107, 0, 0.1) !important;
+}
+
+/* 图标悬停效果 */
+.icon-container {
+    transition: all 0.3s ease;
+}
+
+.card:hover .icon-container {
+    background-color: var(--primary-light) !important;
+}
+
+.icon-container img {
+    transition: all 0.3s ease;
+    /* 将任何颜色的图标转为黑色 */
+    filter: brightness(0) saturate(100%) opacity(0.8);
+}
+
+.card:hover .icon-container img {
+    /* 悬停时转为橙色 */
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(346deg) brightness(104%) contrast(107%);
+}
+
+/* Hero区域数字统计悬停效果 */
+.stat-item:hover div {
+    color: var(--primary-color) !important;
+    cursor: pointer;
+}
+
 /* 主题色辅助类 */
 .text-primary {
     color: var(--primary-color) !important;
@@ -110,16 +152,22 @@ html {
 /* 案例卡片样式 */
 .case-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
     transition: all 0.3s ease;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .case-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15);
+}
+
+.case-card .relative {
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
 }
 
 .case-card h3 {
@@ -133,6 +181,54 @@ html {
 /* 16:9 宽屏比例 */
 .aspect-video {
     aspect-ratio: 16 / 9;
+}
+
+/* 案例轮播导航按钮 */
+.cases-nav-btn {
+    box-shadow: none;
+}
+
+.cases-nav-btn:hover {
+    box-shadow: 0 6px 30px rgba(255, 107, 0, 0.25);
+}
+
+.cases-nav-btn:active {
+    box-shadow: 0 8px 40px rgba(255, 107, 0, 0.4);
+}
+
+.cases-nav-btn .absolute {
+    background: linear-gradient(135deg, var(--primary-color), #ff8c3a);
+}
+
+.cases-nav-btn:hover .absolute {
+    background: linear-gradient(135deg, #ff8c3a, var(--primary-color));
+}
+
+/* 案例指示器样式 - 简洁圆点 */
+#cases-indicators {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#cases-indicators .indicator {
+    width: 8px;
+    height: 8px;
+    background: #D1D5DB;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#cases-indicators .indicator.active {
+    background: var(--primary-color);
+    width: 10px;
+    height: 10px;
+}
+
+#cases-indicators .indicator:hover:not(.active) {
+    background: #9CA3AF;
 }
 
 /* 响应式 */
