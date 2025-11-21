@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - Yestride 源踔科技</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        orange: {
+                            500: '#FF6B00',
+                            600: '#E05E00'
+                        },
+                        primary: {
+                            500: '#FF6B00',
+                            600: '#E05E00'
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --primary-color: #FF6B00;
+            --primary-dark: #E05E00;
+            --primary-light: #FFF4E6;
+            --font-logo: 1.25rem;
+            --font-company-name: 1.25rem;
+            --font-nav-menu: 1.25rem;
+            --font-cta-button: 0.875rem;
+            --font-hero-title: 3rem;
+            --font-hero-subtitle: 1.125rem;
+            --font-section-title: 1.875rem;
+            --font-card-title: 1.125rem;
+            --font-body: 0.875rem;
+            --weight-logo: 700;
+            --weight-company-name: 500;
+            --weight-nav-menu: 400;
+        }
+        .logo-text { font-size: var(--font-logo); font-weight: var(--weight-logo); }
+        .company-name { font-size: var(--font-company-name); font-weight: var(--weight-company-name); }
+        .nav-menu { font-size: var(--font-nav-menu); font-weight: var(--weight-nav-menu); }
+        header .container > div { position: relative; }
+        html { scroll-behavior: smooth; }
+        body {
+            opacity: 0;
+            transition: opacity 0.4s ease-in;
+        }
+        /* 侧边栏新样式：仅文字变色，无背景和加粗 */
+        .sidebar-link:hover {
+            color: var(--primary-color);
+        }
+        .sidebar-link.active {
+            color: var(--primary-color);
+        }
+        .job-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        .job-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.1);
+        }
+        .content-section {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        /* 将滚动边距应用在标题上，以实现精确定位 */
+        .scroll-mt-24 {
+            scroll-margin-top: 6.5rem; 
+        }
+        .home-icon img {
+            transition: filter 0.3s ease;
+            filter: brightness(0) saturate(100%) invert(30%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(85%);
+        }
+        .home-icon:hover img {
+            filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(346deg) brightness(104%) contrast(107%);
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 hover:shadow-md" id="header">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center flex-1">
+                    <a href="index.html" class="logo-text" style="color: var(--primary-color)">Yestride</a>
+                    <a href="index.html" class="ml-2 text-gray-700 company-name hidden md:inline transition hover-primary">源踔科技</a>
+                </div>
+                <nav class="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2"></nav>
+                <div class="flex items-center space-x-3 flex-1 justify-end">
+                    <a href="index.html" title="回到首页" class="home-icon">
+                        <img src="images/svgs/返回首页.svg" alt="回到首页" class="h-6 w-6">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with Sidebar -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="flex flex-col md:flex-row md:space-x-12">
+            
+            <aside class="w-full md:w-48 md:flex-shrink-0 mb-8 md:mb-0">
+                <nav class="sticky top-24">
+                    <ul class="space-y-2">
+                        <li><a href="#company-intro" class="sidebar-link block px-3 py-2 text-gray-700 transition-colors duration-200">公司介绍</a></li>
+                        <li><a href="#join-us" class="sidebar-link block px-3 py-2 text-gray-700 transition-colors duration-200">加入我们</a></li>
+                        <li><a href="#company-news" class="sidebar-link block px-3 py-2 text-gray-700 transition-colors duration-200">公司新闻</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="flex-1">
+                <section id="company-intro" class="content-section">
+                    <h2 class="text-3xl font-bold mb-8 border-l-4 border-primary pl-4 scroll-mt-24">公司介绍</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <p class="text-gray-700 leading-relaxed mb-4">源踔科技（Yestride）是一家以“思源成智，踔然于行”为核心理念，专注于人工智能前沿技术研发与创新应用的高科技企业。我们致力于为全球政府及企业客户提供领先的AI解决方案和数字化转型服务，帮助他们在日新月异的科技浪潮中保持竞争优势。</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">自成立以来，源踔科技汇聚了一批来自顶尖学府和知名科技公司的资深AI算法工程师、全栈开发专家和产品设计师。我们的团队在计算机视觉、自然语言处理、知识图谱和云原生架构等领域拥有深厚的技术积累和丰富的项目实践经验。</p>
+                        <p class="text-gray-700 leading-relaxed">我们坚信，AI不仅是技术，更是推动社会进步的核心动力。源踔科技的使命是“让每个组织都能拥抱AI时代”，通过提供高性价比、高可靠性的AI产品与服务，降低技术门槛，赋能千行百业，共同创造一个更智能、更高效的未来。</p>
+                    </div>
+                </section>
+
+                <section id="join-us" class="content-section">
+                    <h2 class="text-3xl font-bold mb-8 border-l-4 border-primary pl-4 scroll-mt-24">加入我们</h2>
+                    <div class="space-y-8">
+                        <div class="job-card bg-white">
+                            <h3 class="text-2xl font-bold mb-2 text-primary">算法工程师</h3>
+                            <p class="text-gray-500 mb-4">成都 | 全职 | 经验不限</p>
+                            <div class="text-gray-700 leading-relaxed">
+                                <p class="font-semibold mb-2">岗位职责：</p>
+                                <ul class="list-disc list-inside mb-4 space-y-1">
+                                    <li>负责计算机视觉、深度学习等相关算法的研发、实现和优化。</li>
+                                    <li>跟进前沿AI技术，并将其应用于智慧城市、工业自动化等实际场景。</li>
+                                    <li>参与构建和维护公司的核心算法库和模型训练平台。</li>
+                                    <li>与产品和工程团队协作，推动算法的落地和迭代。</li>
+                                </ul>
+                                <p class="font-semibold mb-2">任职要求：</p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>计算机、电子信息、数学等相关专业本科及以上学历。</li>
+                                    <li>熟悉Python/C++，掌握至少一种深度学习框架（如PyTorch, TensorFlow）。</li>
+                                    <li>对数据结构和算法有深入理解，具备良好的编程能力。</li>
+                                    <li>有相关项目经验或在顶级会议发表论文者优先。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="job-card bg-white">
+                            <h3 class="text-2xl font-bold mb-2 text-primary">后端开发工程师</h3>
+                            <p class="text-gray-500 mb-4">成都 | 全职 | 3-5年经验</p>
+                            <div class="text-gray-700 leading-relaxed">
+                                <p class="font-semibold mb-2">岗位职责：</p>
+                                <ul class="list-disc list-inside mb-4 space-y-1">
+                                    <li>负责公司AI产品和解决方案的后端服务设计、开发和维护。</li>
+                                    <li>参与构建高可用、高并发的云原生微服务架构。</li>
+                                    <li>设计和优化数据库，保障数据存储的稳定性和查询效率。</li>
+                                    <li>与前端和算法团队紧密合作，完成产品功能的快速交付。</li>
+                                </ul>
+                                <p class="font-semibold mb-2">任职要求：</p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>熟悉Go/Java/Python中至少一种后端开发语言。</li>
+                                    <li>熟悉Docker、Kubernetes等云原生技术，有微服务架构实践经验。</li>
+                                    <li>熟悉MySQL、PostgreSQL、Redis等常用数据库和中间件。</li>
+                                    <li>具备良好的系统设计能力和解决复杂问题的能力。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="job-card bg-white">
+                            <h3 class="text-2xl font-bold mb-2 text-primary">产品经理</h3>
+                            <p class="text-gray-500 mb-4">成都 | 全职 | 1-3年经验</p>
+                            <div class="text-gray-700 leading-relaxed">
+                                <p class="font-semibold mb-2">岗位职责：</p>
+                                <ul class="list-disc list-inside mb-4 space-y-1">
+                                    <li>负责AI相关产品的市场调研、需求分析和产品规划。</li>
+                                    <li>撰写详细的产品需求文档（PRD），绘制产品原型。</li>
+                                    <li>协调设计、研发、测试等资源，跟进项目进度，确保产品按时上线。</li>
+                                    <li>收集用户反馈，持续迭代优化产品，提升用户体验。</li>
+                                </ul>
+                                <p class="font-semibold mb-2">任职要求：</p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>对AI技术和行业应用有浓厚兴趣和深刻理解。</li>
+                                    <li>具备出色的逻辑思维、沟通协调和文档撰写能力。</li>
+                                    <li>熟练使用Axure、Figma等原型设计工具。</li>
+                                    <li>有To B或To G产品经验者优先。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="company-news" class="content-section">
+                    <h2 class="text-3xl font-bold mb-8 border-l-4 border-primary pl-4 scroll-mt-24">公司新闻</h2>
+                    <div class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-md">
+                            <p class="text-sm text-gray-500 mb-2">2025年11月15日</p>
+                            <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors cursor-pointer">源踔科技荣获“年度AI创新企业”奖项</h3>
+                            <p class="text-gray-600 leading-relaxed">近日，在年度行业峰会上，源踔科技凭借其在智慧矿山领域的突出贡献和技术创新，被评为“年度AI创新企业”，彰显了公司在AI落地应用方面的强大实力。</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-md">
+                            <p class="text-sm text-gray-500 mb-2">2025年10月28日</p>
+                            <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors cursor-pointer">公司与某顶尖大学达成战略合作，共建AI联合实验室</h3>
+                            <p class="text-gray-600 leading-relaxed">源踔科技正式宣布与国内某顶尖大学计算机学院达成战略合作，双方将共同建立人工智能联合实验室，聚焦于大模型和知识图谱的前沿技术研究，共同培养AI领域的未来人才。</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-md">
+                            <p class="text-sm text-gray-500 mb-2">2025年09月01日</p>
+                            <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors cursor-pointer">源踔科技发布全新数字人解决方案，助力中小企业低成本营销</h3>
+                            <p class="text-gray-600 leading-relaxed">今日，源踔科技正式发布了面向中小企业的高性价比数字人解决方案。该方案大幅降低了数字人定制和使用的门槛，旨在帮助广大中小企业利用AI技术进行品牌宣传和直播带货，开启营销新篇章。</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-3 transition-all duration-300 hover:shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-sm">
+                <p class="text-gray-600 hover:text-primary transition-colors duration-300 cursor-pointer"> 电话：400-xxx-xxxx | 邮箱：info@yestride.com | 地址：四川省成都市双流区双燕路西段399号LACADIERE天际B栋41F01/08 | 蜀ICP备xxxxxxxx号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.content-section');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+            if (sidebarLinks.length === 0) return;
+
+            const activateLink = (id) => {
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetTitle = document.querySelector(`${targetId} h2`);
+                    if (targetTitle) {
+                        targetTitle.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        activateLink(entry.target.id);
+                    }
+                });
+            }, { 
+                rootMargin: '-100px 0px -60% 0px'
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            if (window.location.hash) {
+                activateLink(window.location.hash.substring(1));
+            } else if (sections.length > 0) {
+                activateLink(sections[0].id);
+            }
+        });
+    </script>
+</body>
+</html>
