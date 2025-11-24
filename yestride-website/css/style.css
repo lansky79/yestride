@@ -24,6 +24,10 @@ html {
     font-size: 14.4px; /* 16px * 0.9 = 14.4px */
 }
 
+.sidebar-link {
+    font-size: var(--font-nav-menu);
+}
+
 /* 按钮样式 */
 .btn-primary {
     background-color: var(--primary-color);
@@ -60,7 +64,7 @@ html {
 .card {
     background: white;
     border-radius: 12px;
-    padding: 2.5rem;
+    padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     height: 100%;
@@ -175,7 +179,7 @@ footer:hover {
 }
 
 .case-card p {
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 1.5rem 1rem;
 }
 
 /* 16:9 宽屏比例 */
@@ -248,4 +252,13 @@ footer:hover {
     .case-card:hover {
         transform: translateY(-4px);
     }
+}
+
+/* Tech Stack hover effect */
+.tech-item > div:first-child {
+    transition: all 0.3s ease;
+}
+
+.tech-stack-section:hover .tech-item > div:first-child {
+    background-color: var(--primary-color);
 }

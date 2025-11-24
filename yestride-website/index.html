@@ -39,41 +39,85 @@
     <style>
         :root {
             /* ========== 主题色配置 ========== */
-            --primary-color: #FF6B00;      /* 主题色：改这里就能统一修改所有橙色 */
-            --primary-dark: #E05E00;       /* 主题色深色 */
-            --primary-light: #FFF4E6;      /* 主题色浅色背景 */
-            
+            --primary-color: #FF6B00;
+            /* 主题色：改这里就能统一修改所有橙色 */
+            --primary-dark: #E05E00;
+            /* 主题色深色 */
+            --primary-light: #FFF4E6;
+            /* 主题色浅色背景 */
+
             /* ========== 字体大小配置 ========== */
             /* Header 顶部导航栏 */
-            --font-logo: 1.25rem;          /* Logo "Yestride" 字体大小 (默认 20px) */
-            --font-company-name: 1.25rem;     /* 公司中文名 "源踔科技" (默认 16px) */
-            --font-nav-menu: 1.25rem;         /* 导航菜单 "产品/案例/关于" (默认 16px) */
-            --font-cta-button: 0.875rem;   /* "立即咨询" 按钮 (默认 14px) */
-            
+            --font-logo: 1.25rem;
+            /* Logo "Yestride" 字体大小 (默认 20px) */
+            --font-company-name: 1.25rem;
+            /* 公司中文名 "源踔科技" (默认 16px) */
+            --font-nav-menu: 1.25rem;
+            /* 导航菜单 "产品/案例/关于" (默认 16px) */
+            --font-cta-button: 0.875rem;
+            /* "立即咨询" 按钮 (默认 14px) */
+
             /* 内容区域 */
-            --font-hero-title: 3rem;       /* 主标题 "智启未来，踔厉前行" (默认 48px) */
-            --font-hero-subtitle: 1.125rem;/* 副标题 (默认 18px) */
-            --font-section-title: 1.875rem;/* 章节标题 "我们的产品" (默认 30px) */
-            --font-card-title: 1.125rem;   /* 卡片标题 (默认 18px) */
-            --font-body: 0.875rem;         /* 正文内容 (默认 14px) */
-            
+            --font-hero-title: 3rem;
+            /* 主标题 "智启未来，踔厉前行" (默认 48px) */
+            --font-hero-subtitle: 1.125rem;
+            /* 副标题 (默认 18px) */
+            --font-section-title: 1.875rem;
+            /* 章节标题 "我们的产品" (默认 30px) */
+            --font-card-title: 1.125rem;
+            /* 卡片标题 (默认 18px) */
+            --font-body: 0.875rem;
+            /* 正文内容 (默认 14px) */
+
             /* 字重配置 */
-            --weight-logo: 700;            /* Logo 字重 */
-            --weight-company-name: 500;    /* 公司名字重 */
-            --weight-nav-menu: 400;        /* 菜单字重 */
+            --weight-logo: 700;
+            /* Logo 字重 */
+            --weight-company-name: 500;
+            /* 公司名字重 */
+            --weight-nav-menu: 400;
+            /* 菜单字重 */
         }
-        
+
         /* 应用字体大小变量 */
-        .logo-text { font-size: var(--font-logo); font-weight: var(--weight-logo); }
-        .company-name { font-size: var(--font-company-name); font-weight: var(--weight-company-name); }
-        .nav-menu { font-size: var(--font-nav-menu); font-weight: var(--weight-nav-menu); }
-        .cta-btn { font-size: var(--font-cta-button); }
-        .hero-title { font-size: var(--font-hero-title); }
-        .hero-subtitle { font-size: var(--font-hero-subtitle); }
-        .section-title { font-size: var(--font-section-title); }
-        .card-title { font-size: var(--font-card-title); }
-        .body-text { font-size: var(--font-body); }
-        
+        .logo-text {
+            font-size: var(--font-logo);
+            font-weight: var(--weight-logo);
+        }
+
+        .company-name {
+            font-size: var(--font-company-name);
+            font-weight: var(--weight-company-name);
+        }
+
+        .nav-menu {
+            font-size: var(--font-nav-menu);
+            font-weight: var(--weight-nav-menu);
+        }
+
+        .cta-btn {
+            font-size: var(--font-cta-button);
+        }
+
+        .hero-title {
+            font-size: var(--font-hero-title);
+        }
+
+        .hero-subtitle {
+            font-size: var(--font-hero-subtitle);
+        }
+
+        .section-title {
+            font-size: var(--font-section-title);
+        }
+
+        .card-title {
+            font-size: var(--font-card-title);
+        }
+
+        .body-text {
+            font-size: var(--font-body);
+        }
+
         /* 如果想改成科技蓝，取消下面注释：
         :root {
             --primary-color: #2563EB;
@@ -81,34 +125,65 @@
             --primary-light: #EFF6FF;
         }
         */
-        
+
         /* 应用字体大小变量 */
-        .logo-text { font-size: var(--font-logo); font-weight: var(--weight-logo); }
-        .company-name { font-size: var(--font-company-name); font-weight: var(--weight-company-name); }
-        .nav-menu { font-size: var(--font-nav-menu); font-weight: var(--weight-nav-menu); }
-        .cta-btn { font-size: var(--font-cta-button); }
-        .hero-title { font-size: var(--font-hero-title); }
-        .hero-subtitle { font-size: var(--font-hero-subtitle); }
-        .section-title { font-size: var(--font-section-title); }
-        .card-title { font-size: var(--font-card-title); }
-        .body-text { font-size: var(--font-body); }
-        
+        .logo-text {
+            font-size: var(--font-logo);
+            font-weight: var(--weight-logo);
+        }
+
+        .company-name {
+            font-size: var(--font-company-name);
+            font-weight: var(--weight-company-name);
+        }
+
+        .nav-menu {
+            font-size: var(--font-nav-menu);
+            font-weight: var(--weight-nav-menu);
+        }
+
+        .cta-btn {
+            font-size: var(--font-cta-button);
+        }
+
+        .hero-title {
+            font-size: var(--font-hero-title);
+        }
+
+        .hero-subtitle {
+            font-size: var(--font-hero-subtitle);
+        }
+
+        .section-title {
+            font-size: var(--font-section-title);
+        }
+
+        .card-title {
+            font-size: var(--font-card-title);
+        }
+
+        .body-text {
+            font-size: var(--font-body);
+        }
+
         /* Header 布局优化 */
-        header .container > div {
+        header .container>div {
             position: relative;
         }
-        
+
         /* ========== 全屏分屏布局 ========== */
         /* Hero + Tech Stack 占满第一屏 */
         #home {
-            min-height: calc(100vh - 64px); /* 100vh - header高度 */
+            min-height: calc(100vh - 64px);
+            /* 100vh - header高度 */
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0;
-            padding-bottom: 80px; /* 为技术栏留出空间 */
+            padding-bottom: 80px;
+            /* 为技术栏留出空间 */
         }
-        
+
         /* Tech Stack 固定在Hero底部 */
         .tech-stack-section {
             position: absolute;
@@ -116,24 +191,31 @@
             left: 0;
             right: 0;
         }
-        
+
         /* Hero内容容器 */
-        #home > .container {
-            margin-top: -40px; /* 微调，让内容更居中 */
+        #home>.container {
+            margin-top: -40px;
+            /* 微调，让内容更居中 */
         }
-        
+
         /* 产品、案例、关于我们各占一屏 */
-        #products, #cases, #about {
+        #products,
+        #cases,
+        #about {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding-top: 4rem;
             padding-bottom: 4rem;
         }
-        
+
         /* 移动端适配 */
         @media (max-width: 768px) {
-            #home, #products, #cases, #about {
+
+            #home,
+            #products,
+            #cases,
+            #about {
                 min-height: auto;
                 padding-top: 3rem;
                 padding-bottom: 3rem;
@@ -144,25 +226,28 @@
 
 <body class="font-inter">
     <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 hover:shadow-md" id="header">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 hover:shadow-md"
+        id="header">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <!-- Left: Logo -->
                 <div class="flex items-center flex-1">
-                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="logo-text" style="color: var(--primary-color)">Yestride</a>
-                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="ml-2 text-gray-700 company-name hidden md:inline transition hover-primary">源踔科技</a>
+                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="logo-text"
+                        style="color: var(--primary-color)">Yestride</a>
+                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                        class="ml-2 text-gray-700 company-name hidden md:inline transition hover-primary">源踔科技</a>
                 </div>
 
                 <!-- Center: Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
-                    <a href="#products" class="text-gray-700 transition hover-primary nav-menu">产品</a>
-                    <a href="#cases" class="text-gray-700 transition hover-primary nav-menu">案例</a>
-                    <a href="#about" class="text-gray-700 transition hover-primary nav-menu">关于</a>
+                    <a href="#products" class="text-black-700 transition hover-primary nav-menu">产品</a>
+                    <a href="#cases" class="text-black-700 transition hover-primary nav-menu">案例</a>
+                    <a href="#about" class="text-black-700 transition hover-primary nav-menu">关于</a>
                 </nav>
 
                 <!-- Right: CTA Button -->
                 <div class="flex items-center space-x-3 flex-1 justify-end">
-                    <a href="about.html" class="text-gray-700 transition hover-primary hidden md:inline-block">了解更多</a>
+                    <a href="about.html" class="text-black-700 transition hover-primary hidden md:inline-block">了解更多</a>
 
                     <!-- Mobile Menu Button -->
                     <button id="mobile-menu-btn" class="md:hidden text-gray-700">
@@ -178,7 +263,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <nav class="container mx-auto px-4 py-4 flex flex-col space-y-3">
-                <a href="#products" class="text-gray-700 transition hover-primary nav-menu">产品</a>
+                <a href="#products" class="text-black-700 transition hover-primary nav-menu">产品</a>
                 <a href="#cases" class="text-gray-700 transition hover-primary nav-menu">案例</a>
                 <a href="#about" class="text-gray-700 transition hover-primary nav-menu">关于</a>
                 <a href="#contact" class="btn-primary text-center cta-btn">立即咨询</a>
@@ -190,18 +275,19 @@
     <section id="home" class="relative">
         <div class="container mx-auto px-4 text-center">
             <!-- NEW Badge -->
-            <div class="inline-flex items-center text-white text-xs px-3 py-1 rounded-full mb-6" style="background-color: var(--primary-color)">
+            <div class="inline-flex items-center text-white text-xs px-3 py-1 rounded-full mb-6"
+                style="background-color: var(--primary-color)">
                 <span class="font-medium">NEW</span>
                 <span class="ml-2">AI驱动的解决方案</span>
             </div>
-            
+
             <!-- Main Heading -->
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 思源成智，踔然于行
             </h1>
 
             <!-- Subheading -->
-            <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
+            <p class="text-black-600 max-w-2xl mx-auto mb-12 text-lg">
                 源踔科技专注于为政府和企业提供AI创新应用与数字化转型解决方案<br class="hidden md:block">
                 让每个组织都能拥抱AI时代
             </p>
@@ -209,57 +295,61 @@
             <!-- Stats -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="stat-item">
-                    <div class="text-5xl md:text-6xl font-bold text-gray-900 mb-2 transition-colors duration-300">10+</div>
-                    <p class="text-gray-600 text-lg">覆盖行业</p>
+                    <div class="text-5xl md:text-6xl font-bold text-black-500 mb-2 transition-colors duration-300">10+
+                    </div>
+                    <p class="text-black-600 text-lg">覆盖行业</p>
                 </div>
                 <div class="stat-item">
-                    <div class="text-5xl md:text-6xl font-bold text-gray-900 mb-2 transition-colors duration-300">30+</div>
-                    <p class="text-gray-600 text-lg">满意客户</p>
+                    <div class="text-5xl md:text-6xl font-bold text-black-500 mb-2 transition-colors duration-300">30+
+                    </div>
+                    <p class="text-black-600 text-lg">满意客户</p>
                 </div>
                 <div class="stat-item">
-                    <div class="text-5xl md:text-6xl font-bold text-gray-900 mb-2 transition-colors duration-300">20+</div>
-                    <p class="text-gray-600 text-lg">知识产权</p>
+                    <div class="text-5xl md:text-6xl font-bold text-black-500 mb-2 transition-colors duration-300">20+
+                    </div>
+                    <p class="text-black-600 text-lg">知识产权</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Tech Stack Section -->
-        <div class="tech-stack-section py-8 bg-gray-50">
-            <div class="container mx-auto px-4">
+    <div class="tech-stack-section py-8">
+        <div class="container mx-auto px-4">
             <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                <div class="flex items-center">
-                    <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
-                    <span class="text-gray-600 font-medium">AI大模型</span>
+                <div class="flex items-center tech-item">
+                    <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
+                    <span class="text-black-500 font-medium">AI大模型</span>
                 </div>
-                <div class="flex items-center">
-                    <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                    <span class="text-gray-600 font-medium">云原生架构</span>
+                <div class="flex items-center tech-item">
+                    <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
+                    <span class="text-black-500 font-medium">物联网技术</span>
                 </div>
-                <div class="flex items-center">
-                    <div class="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
-                    <span class="text-gray-600 font-medium">大数据分析</span>
+                <div class="flex items-center tech-item">
+                    <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
+                    <span class="text-black-500 font-medium">大数据分析</span>
                 </div>
-                <div class="flex items-center">
-                    <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-                    <span class="text-gray-600 font-medium">物联网技术</span>
+                <div class="flex items-center tech-item">
+                    <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
+                    <span class="text-black-500 font-medium">视觉计算</span>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     </section>
 
     <!-- Products Section -->
     <section id="products">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">产品与服务</h2>
-            
+
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Service 1: 政企信息化 -->
                 <div class="card text-center">
                     <!-- 正常版：浅灰色背景 + 黑色图标 -->
-                    <div class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
+                    <div
+                        class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
                         <img src="images/svgs/政府信息化.svg" alt="政企信息化" class="w-7 h-7">
                     </div>
                     <!-- 反显版（注释）：橙色背景 + 白色图标
@@ -272,7 +362,7 @@
                     </div>
                     -->
                     <h3 class="font-bold text-xl mb-3">政企信息化解决方案</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <p class="text-black-600 leading-relaxed mb-4">
                         为政府和企业提供全流程数字化转型服务，包括智慧矿山、智慧水利、工厂自动化等解决方案
                     </p>
                     <div class="text-sm text-gray-500">
@@ -283,11 +373,12 @@
                 <!-- Service 2: AI产品定制开发 -->
                 <div class="card text-center">
                     <!-- 正常版：浅灰色背景 + 黑色图标 -->
-                    <div class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
+                    <div
+                        class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
                         <img src="images/svgs/ai定制.svg" alt="AI产品定制开发" class="w-7 h-7">
                     </div>
                     <h3 class="font-bold text-xl mb-3">AI产品定制开发</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <p class="text-black-600 leading-relaxed mb-4">
                         基于视觉计算和深度学习技术，为企业定制复杂视觉算法，打造“感知-决策-执行”的全栈智能体
                     </p>
                     <div class="text-sm text-gray-500">
@@ -298,11 +389,12 @@
                 <!-- Service 3: 数字人解决方案 -->
                 <div class="card text-center">
                     <!-- 正常版：浅灰色背景 + 黑色图标 -->
-                    <div class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
+                    <div
+                        class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
                         <img src="images/svgs/数字人.svg" alt="数字人解决方案" class="w-7 h-7">
                     </div>
                     <h3 class="font-bold text-xl mb-3">数字人解决方案</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <p class="text-black-600 leading-relaxed mb-4">
                         提供针对中小企业成本友好的数字人解决方案，适用于客户服务、品牌营销、虚拟主播等场景
                     </p>
                     <div class="text-sm text-gray-500">
@@ -314,17 +406,19 @@
     </section>
 
     <!-- Cases Section -->
-    <section id="cases" class="bg-gray-50">
+    <section id="cases">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">案例展示</h2>
-           
+
 
             <!-- 案例轮播容器 -->
             <div class="relative">
                 <!-- 左箭头 -->
-                <button id="cases-prev" class="cases-nav-btn cases-nav-prev hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10 w-12 h-12 rounded-full items-center justify-center transition-all duration-300 group">
+                <button id="cases-prev"
+                    class="cases-nav-btn cases-nav-prev hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10 w-12 h-12 rounded-full items-center justify-center transition-all duration-300 group">
                     <div class="absolute inset-0 rounded-full transition-all duration-300"></div>
-                    <svg class="w-7 h-7 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <svg class="w-7 h-7 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        stroke-width="2.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
                     </svg>
                 </button>
@@ -334,125 +428,163 @@
                     <!-- Case 1: 智慧矿山综合管控平台 -->
                     <div class="case-card group">
                         <div class="relative overflow-hidden rounded-lg mb-4">
-                            <img src="images/cases/case-1.webp" alt="智慧矿山综合管控平台" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                            <div class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
+                            <img src="images/cases/case-1.webp" alt="智慧矿山综合管控平台"
+                                class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div
+                                class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
                                 <span class="text-gray-500 text-lg">智慧矿山综合管控平台</span>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </div>
-                        <p class="text-gray-700  leading-relaxed px-6 pb-6">集成矿山生产、安全、设备等多维度数据，实现智能化综合管控</p>
+                        <p class="text-black-700 leading-relaxed px-6 pb-4">智慧矿山综管平台，集成矿山生产、安全、设备等多源数据，实现智能化综合管控</p>
                     </div>
 
                     <!-- Case 2: 工厂安监系统 -->
                     <div class="case-card group">
                         <div class="relative overflow-hidden rounded-lg mb-4">
-                            <img src="images/cases/case-2.webp" alt="工厂安监系统" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                            <div class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
+                            <img src="images/cases/case-2.webp" alt="工厂安监系统"
+                                class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div
+                                class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
                                 <span class="text-gray-500 text-lg">工厂安监系统</span>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </div>
-                        <p class="text-gray-700 leading-relaxed px-6 pb-6">AI视觉识别违规行为，实时预警安全隐患，保障生产安全</p>
+                        <p class="text-black-700 leading-relaxed px-6 pb-4">玻纤工厂安监系统，AI识别违规行为，实时预警安全隐患，保障生产安全</p>
                     </div>
 
                     <!-- Case 3: 森林防火应急指挥平台 -->
                     <div class="case-card group">
                         <div class="relative overflow-hidden rounded-lg mb-4">
-                            <img src="images/cases/case-3.webp" alt="森林防火应急指挥平台" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                            <div class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
+                            <img src="images/cases/case-3.webp" alt="森林防火应急指挥平台"
+                                class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div
+                                class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
                                 <span class="text-gray-500 text-lg">森林防火应急指挥平台</span>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </div>
-                        <p class="text-gray-700 leading-relaxed px-6 pb-6">整合监控、气象、地理信息，实现火情智能预警和应急调度</p>
+                        <p class="text-black-700 leading-relaxed px-6 pb-4">森林防火应急指挥平台，整合监控、气象、地理信息，实现火情智能预警和应急调度</p>
                     </div>
 
                     <!-- Case 4: 智慧环卫 -->
                     <div class="case-card group">
                         <div class="relative overflow-hidden rounded-lg mb-4">
-                            <img src="images/cases/case-4.webp" alt="智慧环卫" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                            <div class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
+                            <img src="images/cases/case-4.webp" alt="智慧环卫"
+                                class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div
+                                class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
                                 <span class="text-gray-500 text-lg">智慧环卫</span>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </div>
-                        <p class="text-gray-700 leading-relaxed px-6 pb-6">智能化环卫管理系统，实现垃圾收运全流程监控和优化调度</p>
+                        <p class="text-black-700 leading-relaxed px-6 pb-4">智能化环卫管理系统，实现垃圾收运全流程监控和优化调度</p>
                     </div>
 
                     <!-- Case 5: 资产定位管理系统（基于星闪） -->
                     <div class="case-card group">
                         <div class="relative overflow-hidden rounded-lg mb-4">
-                            <img src="images/cases/case-5.webp" alt="资产定位管理系统" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                            <div class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
+                            <img src="images/cases/case-5.webp" alt="资产定位管理系统"
+                                class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div
+                                class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
                                 <span class="text-gray-500 text-lg">资产定位管理系统</span>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </div>
-                        <p class="text-gray-700 leading-relaxed px-6 pb-6">基于星闪技术的设备资产实时追踪和智能盘点管理系统</p>
+                        <p class="text-black-700 leading-relaxed px-6 pb-4">基于星闪的资产定位管理系统，对资产进行实时追踪和智能盘点管理</p>
                     </div>
 
                     <!-- Case 6: 档案图像数字化质检工具 -->
                     <div class="case-card group">
                         <div class="relative overflow-hidden rounded-lg mb-4">
-                            <img src="images/cases/case-6.webp" alt="档案图像数字化质检工具" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                            <div class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
+                            <img src="images/cases/case-6.webp" alt="档案图像数字化质检工具"
+                                class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div
+                                class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
                                 <span class="text-gray-500 text-lg">档案图像数字化质检工具</span>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </div>
-                        <p class="text-gray-700 leading-relaxed px-6 pb-6">基于视觉算法的档案扫描质量自动检测，提升数字化效率</p>
+                        <p class="text-black-700 leading-relaxed px-6 pb-4">档案图像数字化质检工具，基于深度学习的档案扫描质量自动检测，提升数字化效率</p>
                     </div>
 
                     <!-- Case 7: 知识图谱推理系统 -->
                     <div class="case-card group">
                         <div class="relative overflow-hidden rounded-lg mb-4">
-                            <img src="images/cases/case-7.webp" alt="知识图谱推理系统" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                            <div class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
+                            <img src="images/cases/case-7.webp" alt="知识图谱推理系统"
+                                class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div
+                                class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
                                 <span class="text-gray-500 text-lg">知识图谱推理系统</span>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </div>
-                        <p class="text-gray-700 leading-relaxed px-6 pb-6">可视化展示复杂知识关系，支持智能检索和关联分析推理</p>
+                        <p class="text-black-700 leading-relaxed px-6 pb-4">知识图谱推理系统，可视化展示复杂知识关系，提供智能检索和关联分析推理</p>
                     </div>
 
                     <!-- Case 8: 温室数字化监控 -->
                     <div class="case-card group">
                         <div class="relative overflow-hidden rounded-lg mb-4">
-                            <img src="images/cases/case-8.webp" alt="温室数字化监控" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                            <div class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
+                            <img src="images/cases/case-8.webp" alt="温室数字化监控"
+                                class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div
+                                class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
                                 <span class="text-gray-500 text-lg">温室数字化监控</span>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </div>
-                        <p class="text-gray-700 leading-relaxed px-6 pb-6">实时监测温室环境参数，智能调控温湿度，提升农作物产量</p>
+                        <p class="text-black-700 leading-relaxed px-6 pb-4">温室数字化监控系统，实时监测温室环境参数，智能调控温湿度，提升农作物产量</p>
                     </div>
 
                     <!-- Case 9: 数字人口播系统 -->
                     <div class="case-card group">
                         <div class="relative overflow-hidden rounded-lg mb-4">
-                            <img src="images/cases/case-9.webp" alt="数字人口播系统" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                            <div class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
+                            <img src="images/cases/case-9.webp" alt="数字人口播系统"
+                                class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div
+                                class="bg-gradient-to-br from-gray-300 to-gray-400 aspect-video rounded-lg hidden items-center justify-center">
                                 <span class="text-gray-500 text-lg">数字人口播系统</span>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </div>
-                        <p class="text-gray-700 leading-relaxed px-6 pb-6">定制2D真人数字人主播，对形象和声音克隆快速生成短视频</p>
+                        <p class="text-black-700 leading-relaxed px-6 pb-4">医疗数字人口播系统，定制2D真人医生主播，对形象和声音克隆快速生成短视频</p>
                     </div>
                 </div>
 
                 <!-- 右箭头 -->
-                <button id="cases-next" class="cases-nav-btn cases-nav-next hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10 w-12 h-12 rounded-full items-center justify-center transition-all duration-300 group">
+                <button id="cases-next"
+                    class="cases-nav-btn cases-nav-next hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10 w-12 h-12 rounded-full items-center justify-center transition-all duration-300 group">
                     <div class="absolute inset-0 rounded-full transition-all duration-300"></div>
-                    <svg class="w-7 h-7 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <svg class="w-7 h-7 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        stroke-width="2.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </button>
@@ -474,11 +606,12 @@
                 <!-- Advantage 1 -->
                 <div class="card text-center">
                     <!-- 正常版：浅灰色背景 + 黑色图标 -->
-                    <div class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
+                    <div
+                        class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
                         <img src="images/svgs/专业队伍.svg" alt="专业的技术团队" class="w-7 h-7">
                     </div>
                     <h3 class="font-bold text-xl mb-3">专业的技术团队</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <p class="text-black-600 leading-relaxed">
                         拥有资深AI算法工程师和全栈开发团队，平均从业经验7年+
                     </p>
                 </div>
@@ -486,11 +619,12 @@
                 <!-- Advantage 2 -->
                 <div class="card text-center">
                     <!-- 正常版：浅灰色背景 + 黑色图标 -->
-                    <div class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
+                    <div
+                        class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
                         <img src="images/svgs/丰富的项目经验.svg" alt="丰富的项目经验" class="w-7 h-7">
                     </div>
                     <h3 class="font-bold text-xl mb-3">丰富的项目经验</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <p class="text-black-600 leading-relaxed">
                         服务20+政企客户，覆盖矿山、地理测绘、水利水务、工厂等多个行业
                     </p>
                 </div>
@@ -498,11 +632,12 @@
                 <!-- Advantage 3 -->
                 <div class="card text-center">
                     <!-- 正常版：浅灰色背景 + 黑色图标 -->
-                    <div class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
+                    <div
+                        class="icon-container w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-100">
                         <img src="images/svgs/多元的合作模式.svg" alt="开放的合作模式" class="w-7 h-7">
                     </div>
                     <h3 class="font-bold text-xl mb-3">开放的合作模式</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <p class="text-black-600 leading-relaxed">
                         包括但不限于纯委托开发、场景与数据共创，以及我方全额投资运营
                     </p>
                 </div>
@@ -569,28 +704,26 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <!-- 已注释：CTA 模块
-    <section id="contact" class="py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">准备好开启AI转型之旅了吗？</h2>
-            <p class="text-gray-600 mb-12">立即联系我们，获取专属解决方案</p>
-
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:400-xxx-xxxx" class="btn-primary">立即咨询</a>
-                <a href="mailto:contact@yestride.com" class="btn-secondary">预约演示</a>
-            </div>
-        </div>
-    </section>
-    -->
-
     <!-- Footer - 极简单行布局 -->
+
     <footer class="bg-white border-t border-gray-200 py-3 transition-all duration-300 hover:shadow-md">
+
         <div class="container mx-auto px-4">
+
             <div class="text-center text-sm">
-                <p class="text-gray-600 hover:text-primary transition-colors duration-300 cursor-pointer"> 合作：info@yestride.com | 招聘：hr@yestride.com | 地址：四川省成都市双流区双燕路西段399号LACADIERE天际B栋41F01/08 | 蜀ICP备xxxxxxxx号</p>
+
+                <p class="text-gray-600">
+
+                    合作：info@yestride.com | 招聘：hr@yestride.com | 地址：四川省成都市双流区双燕路西段399号LACADIERE天际B栋41F01/08 | <a
+                        href="https://beian.miit.gov.cn/" target="_blank"
+                        class="hover:text-primary transition-colors duration-300">蜀ICP备2025172876号</a>
+
+                </p>
+
             </div>
+
         </div>
+
     </footer>
 
     <script src="js/main.js"></script>
