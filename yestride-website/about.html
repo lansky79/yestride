@@ -98,8 +98,12 @@
         }
 
         .content-section {
-            padding-top: 2rem;
             padding-bottom: 2rem;
+        }
+
+        /* 针对公司介绍卡片，悬停时取消移动效果 */
+        #company-intro .card:hover {
+            transform: none;
         }
 
         /* 将滚动边距应用在标题上，以实现精确定位 */
@@ -145,35 +149,35 @@
     <div class="container mx-auto px-4 pt-0 pb-12">
         <div class="flex flex-col md:flex-row md:space-x-12">
 
-            <aside class="w-full md:w-48 md:flex-shrink-0 mb-8 md:mb-0">
+            <aside class="w-full md:w-40 md:flex-shrink-0 mb-8 md:mb-0">
                 <nav class="sticky top-24">
                     <ul class="space-y-2">
                         <li><a href="#company-intro"
-                                class="sidebar-link block px-3 py-2 text-black-700 transition-colors duration-200">公司介绍</a>
+                                class="sidebar-link block px-0 py-2 text-black-700 transition-colors duration-200">公司介绍</a>
                         </li>
                         <li><a href="#join-us"
-                                class="sidebar-link block px-3 py-2 text-black-700 transition-colors duration-200">加入我们</a>
+                                class="sidebar-link block px-0 py-2 text-black-700 transition-colors duration-200">加入我们</a>
                         </li>
                     </ul>
                 </nav>
             </aside>
 
-                        <main class="flex-1">
+            <main class="flex-1">
 
-                                            <div class="mb-8">
+                <div class="mb-8">
 
-                                                <img src="images/backs/about-1.png" alt="团队合作" class="w-full rounded-lg shadow-md object-cover h-64">
+                    <img src="images/backs/about-1.webp" alt="团队合作" class="w-full">
 
-                                            </div>
+                </div>
 
-            
 
-                            <section id="company-intro" class="content-section">
+
+                <section id="company-intro" class="content-section">
                     <h2 class="text-3xl font-bold mb-8 border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500">公司介绍
                     </h2>
-                    <div class="bg-white p-8 rounded-lg shadow-sm space-y-4 text-black-500 leading-relaxed">
+                    <div class="card space-y-4 text-black-500 leading-relaxed">
                         <p>
-                            公司位于四川省成都市，是一家以人工智能为核心驱动，融合大数据与物联网技术，为矿山、林业、水利、制造等行业提供高价值算法和整体方案的科技公司。团队主要成员来自国内一流工科院校及知名企业，并和电子科大等本地单位有持续产研协作；秉承工程师文化，以项目淬炼技术，用场景打磨产品，致力成为以创新立命的研发驱动型组织。
+                            源踔科技（成都）公司位于四川省成都市，是一家以人工智能为核心驱动，融合大数据与物联网技术，为矿山、林业、水利、制造等行业提供高价值算法和整体方案的科技公司。团队主要成员来自国内一流工科院校及知名企业，并和电子科大等本地单位有持续产研协作；秉承工程师文化，以项目淬炼技术，用场景打磨产品，致力成为以创新立命的研发驱动型组织。
                         </p>
                         <p>
                             我们相信，技术壁垒的本质 = 时间 ×
@@ -274,9 +278,9 @@
         <div class="container mx-auto px-4">
             <div class="text-center text-sm">
                 <p class="text-gray-600">
-                    合作：info@yestride.com | 招聘：hr@yestride.com | 地址：四川省成都市双流区双燕路西段399号LACADIERE天际B栋41F01/08 | <a
-                        href="https://beian.miit.gov.cn/" target="_blank"
-                        class="hover:text-primary transition-colors duration-300">蜀ICP备2025172876号</a>
+                    © 2025 源踔科技 | 招聘：hr@yestride.com | <a href="https://beian.miit.gov.cn/" target="_blank"
+                        class="hover:text-primary transition-colors duration-300">蜀ICP备2025172876号</a> |
+                    地址：四川省成都市双流区双燕路西段399号LACADIERE天际B栋41F01/08
                 </p>
             </div>
         </div>

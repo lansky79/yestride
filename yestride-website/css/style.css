@@ -254,6 +254,19 @@ footer:hover {
     }
 }
 
+/* Brand Logo Hover Effect */
+.brand-logo {
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    border-radius: 8px; /* Match the shadow shape */
+}
+
+.brand-logo-row.active .brand-logo,
+.brand-logo-row:hover .brand-logo {
+    filter: grayscale(0%);
+    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15);
+}
+
 /* Tech Stack hover effect */
 .tech-item > div:first-child {
     transition: all 0.3s ease;
