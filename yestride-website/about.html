@@ -183,7 +183,7 @@
 
 
                 <section id="company-intro" class="content-section">
-                    <h1 class="text-3xl font-bold mb-8 border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500">源踔科技｜公司介绍
+                    <h1 class="text-3xl font-bold mb-8 border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500">公司介绍
                     </h1>
                     <div class="card space-y-4 text-black-500 leading-relaxed">
                         <p>
@@ -321,7 +321,7 @@
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
-                    const targetTitle = document.querySelector(`${targetId} h2`);
+                    const targetTitle = document.querySelector(`${targetId} h1`);
                     if (targetTitle) {
                         targetTitle.scrollIntoView({
                             behavior: 'smooth',
