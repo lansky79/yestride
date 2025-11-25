@@ -321,9 +321,9 @@
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
-                    const targetTitle = document.querySelector(`${targetId} h1`);
-                    if (targetTitle) {
-                        targetTitle.scrollIntoView({
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
                         });
@@ -338,7 +338,7 @@
                     }
                 });
             }, {
-                rootMargin: '-100px 0px -60% 0px'
+                rootMargin: '-80px 0px 0px 0px'
             });
 
             sections.forEach(section => {
