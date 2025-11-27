@@ -149,10 +149,28 @@
                     <a href="index.html" title="回到首页" class="home-icon">
                         <img src="images/svgs/返回首页.svg" alt="源踔科技-返回首页" class="h-6 w-6">
                     </a>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <nav class="container mx-auto px-4 py-4 flex flex-col space-y-3">
+            <a href="index.html#products" class="text-black-700 transition hover-primary nav-menu">产品</a>
+            <a href="index.html#cases" class="text-gray-700 transition hover-primary nav-menu">案例</a>
+            <a href="index.html#about" class="text-gray-700 transition hover-primary nav-menu">关于</a>
+            <a href="about.html" class="text-gray-700 transition hover-primary nav-menu">了解更多</a>
+            <a href="#footer" class="btn-primary text-center cta-btn">联系我们</a>
+        </nav>
+    </div>
 
     <!-- Main Content with Sidebar -->
     <div class="container mx-auto px-4 pt-0 pb-12">
