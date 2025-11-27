@@ -141,36 +141,23 @@
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center flex-1">
+                    <!-- 中文标题 -->
                     <a href="index.html"
-                        class="text-gray-700 company-name hidden md:inline transition hover-primary">源踔科技</a>&nbsp;<a href="index.html" class="logo-text" style="color: var(--primary-color)">Yestride</a>
+                        class="text-gray-700 company-name transition hover-primary block md:inline">源踔科技</a>
+                    <!-- 英文标题 -->
+                    <a href="index.html"
+                        class="logo-text md:inline md:ml-2 block"
+                        style="color: var(--primary-color)">Yestride</a>
                 </div>
                 <nav class="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2"></nav>
                 <div class="flex items-center space-x-3 flex-1 justify-end">
                     <a href="index.html" title="回到首页" class="home-icon">
                         <img src="images/svgs/返回首页.svg" alt="源踔科技-返回首页" class="h-6 w-6">
                     </a>
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-        <nav class="container mx-auto px-4 py-4 flex flex-col space-y-3">
-            <a href="index.html#products" class="text-black-700 transition hover-primary nav-menu">产品</a>
-            <a href="index.html#cases" class="text-gray-700 transition hover-primary nav-menu">案例</a>
-            <a href="index.html#about" class="text-gray-700 transition hover-primary nav-menu">关于</a>
-            <a href="about.html" class="text-gray-700 transition hover-primary nav-menu">了解更多</a>
-            <a href="#footer" class="btn-primary text-center cta-btn">联系我们</a>
-        </nav>
-    </div>
 
     <!-- Main Content with Sidebar -->
     <div class="container mx-auto px-4 pt-0 pb-12">
