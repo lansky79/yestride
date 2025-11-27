@@ -60,7 +60,7 @@
 
             /* 内容区域 */
             --font-hero-title: 3rem;
-            /* 主标题 "智启未来，踔厉前行" (默认 48px) */
+            /* 主标题 "思源成智，踔然于行" (默认 48px) */
             --font-hero-subtitle: 1.125rem;
             /* 副标题 (默认 18px) */
             --font-section-title: 1.875rem;
@@ -187,16 +187,15 @@
 
         /* Tech Stack 固定在Hero底部 */
         .tech-stack-section {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            /* position: absolute; - 已移除，由父容器处理 */
+            /* bottom: 0; */
+            /* left: 0; */
+            /* right: 0; */
         }
 
         /* Hero内容容器 */
         #home>.container {
-            margin-top: -40px;
-            /* 微调，让内容更居中 */
+            /* margin-top: -40px;  - 已移除此行以修正垂直居中 */
         }
 
         /* 产品、案例、关于我们各占一屏 */
@@ -235,7 +234,7 @@
     <script>var _hmt = _hmt || []; (function () { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?7ec4900ebbbc3886d2cca41cf0f9fb0c"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();</script>
 </head>
 
-<body class="font-inter">
+<body class="bg-white">
     <!-- Header -->
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 hover:shadow-md"
         id="header">
@@ -283,7 +282,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative flex flex-col justify-center min-h-screen">
+    <section id="home" class="relative flex flex-col justify-start min-h-screen pt-48">
         <div class="container mx-auto px-4 text-center">
             <!-- NEW Badge -->
             <div class="inline-flex items-center text-white text-xs px-3 py-1 rounded-full mb-6 hidden"
@@ -296,57 +295,70 @@
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
                     源踔科技
                 </h1>
-                <p class="text-base text-gray-500 mt-3">
-                    思源成智，踔然于行
+                <p class="text-base text-gray-500 mt-1 text-center">
+                    思源成智　踔然于行
                 </p>
             </div>
-            <p class="font-bold text-gray-900 max-w-2xl mx-auto text-xl text-center mt-6">
-                我们为政府和企业提供创新的智能体应用与数字化转型方案<br>矢志成为卓越可信赖的AI全栈解决方案专家
-            </p>
+                <p class="font-bold text-gray-900 max-w-2xl mx-auto text-xl text-center mt-6">
+                    我们为政府和企业提供创新的智能体应用与数字化转型服务<br>矢志成为卓越可信赖的AI全栈解决方案专家
+                </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                <div class="stat-item">
-                    <div class="text-4xl text-gray-500 font-bold mb-2 transition-colors duration-300 hover:text-orange-500">10+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-60 mt-16">
+                <div class="stat-item text-center">
+                    <div class="text-5xl text-gray-900 font-bold mb-0 transition-colors duration-300 hover:text-orange-500">10+
                     </div>
-                    <p class="text-lg text-gray-500 font-bold">覆盖行业</p>
+                    <p class="text-lg text-gray-500 text-center">覆盖行业</p>
                 </div>
-                <div class="stat-item">
-                    <div class="text-4xl text-gray-500 font-bold mb-2 transition-colors duration-300 hover:text-orange-500">30+
+                <div class="stat-item text-center">
+                    <div class="text-5xl text-gray-900 font-bold mb-0 transition-colors duration-300 hover:text-orange-500">30+
                     </div>
-                    <p class="text-lg text-gray-500 font-bold">满意客户</p>
+                    <p class="text-lg text-gray-500 text-center">满意客户</p>
                 </div>
-                <div class="stat-item">
-                    <div class="text-4xl text-gray-500 font-bold mb-2 transition-colors duration-300 hover:text-orange-500">20+
+                <div class="stat-item text-center">
+                    <div class="text-5xl text-gray-900 font-bold mb-0 transition-colors duration-300 hover:text-orange-500">20+
                     </div>
-                    <p class="text-lg text-gray-500 font-bold">知识产权</p>
+                    <p class="text-lg text-gray-500 text-center">知识产权</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Tech Stack Section -->
-    <div class="tech-stack-section py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                <div class="flex items-center tech-item">
-                    <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
-                    <span class="text-black-600 text-lg">AI大模型</span>
-                </div>
-                <div class="flex items-center tech-item">
-                    <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
-                    <span class="text-black-600 text-lg">物联网技术</span>
-                </div>
-                <div class="flex items-center tech-item">
-                    <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
-                    <span class="text-black-600 text-lg">大数据分析</span>
-                </div>
-                <div class="flex items-center tech-item">
-                    <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
-                    <span class="text-black-600 text-lg">视觉计算</span>
+        <!-- Grouped Bottom Bar -->
+        <div class="absolute bottom-[-4rem] left-0 right-0 py-4">
+            <!-- Image row -->
+            <div class="flex flex-wrap justify-center gap-4 brand-logo-row">
+                <img src="images/backs/1.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-01">
+                <img src="images/backs/2.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-02">
+                <img src="images/backs/3.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-03">
+                <img src="images/backs/4.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-04">
+                <img src="images/backs/5.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-05">
+                <img src="images/backs/6.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-06">
+            </div>
+            <!-- Tech Stack Section -->
+            <div class="tech-stack-section py-8">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                        <div class="flex items-baseline tech-item">
+                            <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
+                            <span class="text-black-600 text-base">AI大模型</span>
+                        </div>
+                        <div class="flex items-baseline tech-item">
+                            <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
+                            <span class="text-black-600 text-base">物联网技术</span>
+                        </div>
+                        <div class="flex items-baseline tech-item">
+                            <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
+                            <span class="text-black-600 text-base">大数据分析</span>
+                        </div>
+                        <div class="flex items-baseline tech-item">
+                            <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
+                            <span class="text-black-600 text-base">视觉计算</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
 
     <!-- Products Section -->
@@ -390,7 +402,7 @@
                     </div>
                     <h3 class="font-bold text-xl mb-3">AI产品定制开发</h3>
                     <p class="text-black-600 leading-relaxed mb-4">
-                        基于视觉计算和深度学习技术，为企业定制复杂视觉算法，打造“感知-决策-执行”的全栈智能体
+                        融合计算机视觉和深度学习技术，为企业定制复杂视觉算法，打造“感知-决策-执行”的全栈智能体
                     </p>
                     <div class="text-sm text-gray-500">
                         模型集成 | 视觉计算 | 软硬一体
@@ -655,14 +667,7 @@
             </div>
 
             <!-- Image row -->
-            <div class="flex flex-wrap justify-center gap-4 mt-16 brand-logo-row">
-                <img src="images/backs/1.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-01">
-                <img src="images/backs/2.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-02">
-                <img src="images/backs/3.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-03">
-                <img src="images/backs/4.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-04">
-                <img src="images/backs/5.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-05">
-                <img src="images/backs/6.webp" class="h-12 brand-logo" alt="源踔科技-合作伙伴-06">
-            </div>
+            
 
             <!-- Stats Section -->
             <!-- 已注释：客户信赖模块
