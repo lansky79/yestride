@@ -6,18 +6,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobile-menu');
     const header = document.getElementById('header');
     
+    // Create backdrop element
+    const backdrop = document.createElement('div');
+    backdrop.className = 'fixed inset-0 bg-black bg-opacity-50 z-30 hidden';
+    document.body.appendChild(backdrop);
+
     // Toggle mobile menu
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('translate-x-full');
+            backdrop.classList.toggle('hidden');
         });
         
-        // Close mobile menu when clicking on links
+        // Close mobile menu when clicking on links or backdrop
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.add('translate-x-full');
+                backdrop.classList.add('hidden');
             });
+        });
+
+        backdrop.addEventListener('click', function() {
+            mobileMenu.classList.add('translate-x-full');
+            backdrop.classList.add('hidden');
         });
     }
     
@@ -65,20 +77,47 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 案例轮播功能
-function initCasesCarousel() {
-    const container = document.getElementById('cases-container');
-    const prevBtn = document.getElementById('cases-prev');
-    const nextBtn = document.getElementById('cases-next');
-    const indicators = document.getElementById('cases-indicators');
+    function initCasesCarousel() {
+        const container = document.getElementById('cases-container');
+        const prevBtn = document.getElementById('cases-prev');
+        const nextBtn = document.getElementById('cases-next');
+        const indicators = document.getElementById('cases-indicators');
 
-    if (!container) return;
+        if (!container) return;
 
-    const cards = Array.from(container.querySelectorAll('.case-card'));
-    const totalCards = cards.length;
-    let cardsPerView = 3;
-    let maxIndex = totalCards - cardsPerView;
-    let currentIndex = 0;
+        const cards = Array.from(container.querySelectorAll('.case-card'));
+        const totalCards = cards.length;
+        let cardsPerView = 3;
+        let maxIndex = totalCards - cardsPerView;
+        let currentIndex = 0;
 
+        let startX = 0;
+        let endX = 0;
+
+        container.addEventListener('touchstart', (e) => {
+            if (window.innerWidth >= 768) return; // Only enable swipe on mobile
+            startX = e.touches[0].clientX;
+        });
+
+        container.addEventListener('touchmove', (e) => {
+            if (window.innerWidth >= 768) return; // Only enable swipe on mobile
+            endX = e.touches[0].clientX;
+        });
+
+        container.addEventListener('touchend', () => {
+            if (window.innerWidth >= 768) return; // Only enable swipe on mobile
+            if (startX - endX > 50) { // Swipe left
+                if (currentIndex < maxIndex) {
+                    goToIndex(currentIndex + 1);
+                }
+            } else if (startX - endX < -50) { // Swipe right
+                if (currentIndex > 0) {
+                    goToIndex(currentIndex - 1);
+                }
+            }
+            startX = 0;
+            endX = 0;
+        });
     function setupCarousel() {
         const isMobile = window.innerWidth < 768;
         cardsPerView = isMobile ? 1 : 3;
