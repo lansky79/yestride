@@ -48,32 +48,33 @@
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <!-- Left -->
-                <div class="flex items-center flex-1">
-                    <!-- Desktop Logo -->
+                <div class="flex items-center flex-1 md:hidden">
+                    <!-- This div will contain the mobile links -->
+                    <nav class="flex-grow">
+                        <div class="flex items-center justify-center space-x-4">
+                            <a href="#company-intro" class="text-black-700 transition hover-primary nav-menu py-0">了解源踔</a>
+                            <a href="#join-us" class="text-black-700 transition hover-primary nav-menu py-0">加入我们</a>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Desktop Left Logo -->
+                <div class="hidden md:flex items-center flex-1">
                     <a href="index.html"
                         class="text-gray-700 company-name transition hover-primary hidden md:inline">源踔科技</a>
                     <a href="index.html"
                         class="logo-text md:inline md:ml-2 hidden md:block"
                         style="color: var(--primary-color)">Yestride</a>
-                    <!-- Mobile Back Button -->
-                    <a href="index.html" title="回到首页" class="home-icon md:hidden">
-                        <img src="images/svgs/返回首页.svg" alt="源踔科技-返回首页" class="h-6 w-6">
-                    </a>
                 </div>
 
                 <!-- Center -->
-                <nav class="flex-grow">
-                    <!-- Mobile Navigation -->
-                    <div class="md:hidden flex items-center justify-center space-x-4">
-                        <a href="#company-intro" class="text-black-700 transition hover-primary nav-menu py-0">了解源踔</a>
-                        <a href="#join-us" class="text-black-700 transition hover-primary nav-menu py-0">加入我们</a>
-                    </div>
-                    <!-- Desktop Navigation (hidden placeholder) -->
+                <nav class="flex-grow hidden md:flex">
+                    <!-- Desktop Navigation -->
                     <div class="hidden md:flex space-x-8 justify-center"></div>
                 </nav>
 
                 <!-- Right -->
-                <div class="flex items-center flex-1 justify-end">
+                <div class="flex items-center flex-1 justify-end hidden md:flex">
                     <!-- Desktop Back Button -->
                     <a href="index.html" title="回到首页" class="home-icon hidden md:block">
                         <img src="images/svgs/返回首页.svg" alt="源踔科技-返回首页" class="h-6 w-6">
@@ -111,7 +112,7 @@
 
 
                 <section id="company-intro" class="content-section">
-                    <h1 class="text-3xl font-bold mb-8 border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500">了解源踔
+                    <h1 class="text-3xl font-bold border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500 my-8">了解源踔
                     </h1>
                     <div class="card space-y-4 text-black-500 leading-relaxed">
                         <p>
@@ -140,7 +141,7 @@
                 </section>
 
                 <section id="join-us" class="content-section">
-                    <h2 class="text-3xl font-bold mb-8 border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500">加入我们
+                    <h2 class="text-3xl font-bold border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500 my-8">加入我们
                     </h2>
                     <div class="space-y-8">
                         <div class="job-card bg-white">

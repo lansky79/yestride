@@ -134,10 +134,15 @@ header .container>div {
 
     #home,
     #products,
-    #cases,
-    #about {
+    #cases { /* #about removed from here */
         min-height: auto;
         padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #about {
+        min-height: auto;
+        padding-top: 0 !important; /* Set padding-top to 0 for #about on mobile */
         padding-bottom: 3rem;
     }
 }
@@ -459,6 +464,6 @@ footer:hover {
 }
 
 .content-section {
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    /* padding-bottom: 2rem;
+    padding-top: 2rem; */
 }

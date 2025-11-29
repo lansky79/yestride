@@ -103,9 +103,21 @@ function initCasesCarousel() {
         if (indicators) {
             indicators.innerHTML = '';
             if (isMobile) {
-                // No indicators on mobile based on user's latest request
-                indicators.style.display = 'none'; 
-            } else {
+                indicators.style.display = 'flex'; // Show indicators on mobile
+                for (let i = 0; i < totalCards; i++) {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'indicator';
+                    if (i === currentIndex) {
+                        indicator.classList.add('active');
+                    }
+                    indicator.addEventListener('click', () => {
+                        currentIndex = i;
+                        setPositionByIndex();
+                        updateButtonsAndIndicators();
+                    });
+                    indicators.appendChild(indicator);
+                }
+            } else { // Desktop
                 indicators.style.display = 'flex'; // Show indicators on desktop
                 const numIndicatorDots = totalCards - itemsPerPage + 1;
                 for (let i = 0; i < numIndicatorDots; i++) {
@@ -146,7 +158,9 @@ function initCasesCarousel() {
                 card.style.flex = '0 0 100%';
                 card.style.padding = '0 0.5rem';
             });
-            // Indicators and buttons are hidden on mobile by updateButtonsAndIndicators
+            // No explicit hide for indicators here, it's handled in updateButtonsAndIndicators
+            if (prevBtn) prevBtn.style.display = 'none';     // Hide prev button on mobile
+            if (nextBtn) nextBtn.style.display = 'none';     // Hide next button on mobile
         } else { // Desktop
             const cardWidth = 100 / itemsPerPage;
             cards.forEach(card => {
