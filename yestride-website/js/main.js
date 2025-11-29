@@ -97,30 +97,39 @@ function initCasesCarousel() {
         animationID = 0;
 
     function updateButtonsAndIndicators() {
+        const isMobile = window.innerWidth < 768;
+
         // Update Indicators
         if (indicators) {
             indicators.innerHTML = '';
-            for (let i = 0; i < totalCards; i++) {
-                const indicator = document.createElement('div');
-                indicator.className = 'indicator';
-                if (i === currentIndex) {
-                    indicator.classList.add('active');
+            if (isMobile) {
+                // No indicators on mobile based on user's latest request
+                indicators.style.display = 'none'; 
+            } else {
+                indicators.style.display = 'flex'; // Show indicators on desktop
+                const numIndicatorDots = totalCards - itemsPerPage + 1;
+                for (let i = 0; i < numIndicatorDots; i++) {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'indicator';
+                    if (i === currentIndex) {
+                        indicator.classList.add('active');
+                    }
+                    indicator.addEventListener('click', () => {
+                        currentIndex = i;
+                        setPositionByIndex();
+                        updateButtonsAndIndicators();
+                    });
+                    indicators.appendChild(indicator);
                 }
-                indicator.addEventListener('click', () => {
-                    currentIndex = i;
-                    setPositionByIndex();
-                    updateButtonsAndIndicators();
-                });
-                indicators.appendChild(indicator);
             }
         }
 
         // Update Buttons
         if (prevBtn) {
-            prevBtn.style.display = currentIndex === 0 ? 'none' : 'flex';
+            prevBtn.style.display = (isMobile || currentIndex === 0) ? 'none' : 'flex';
         }
         if (nextBtn) {
-            nextBtn.style.display = currentIndex >= totalCards - itemsPerPage ? 'none' : 'flex';
+            nextBtn.style.display = (isMobile || currentIndex >= totalCards - itemsPerPage) ? 'none' : 'flex';
         }
     }
 
@@ -137,14 +146,14 @@ function initCasesCarousel() {
                 card.style.flex = '0 0 100%';
                 card.style.padding = '0 0.5rem';
             });
-            if (indicators) indicators.style.display = 'flex';
+            // Indicators and buttons are hidden on mobile by updateButtonsAndIndicators
         } else { // Desktop
             const cardWidth = 100 / itemsPerPage;
             cards.forEach(card => {
                 card.style.flex = `0 0 ${cardWidth}%`;
                 card.style.padding = '0 0.75rem';
             });
-            if (indicators) indicators.style.display = 'flex';
+            // Indicators and buttons are shown/hidden by updateButtonsAndIndicators
         }
         
         if (currentIndex > totalCards - itemsPerPage) {
