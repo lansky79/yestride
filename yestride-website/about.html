@@ -29,99 +29,6 @@
             }
         }
     </script>
-    <style>
-        :root {
-            --primary-color: #FF6B00;
-            --primary-dark: #E05E00;
-            --primary-light: #FFF4E6;
-            --font-logo: 1.25rem;
-            --font-company-name: 1.25rem;
-            --font-nav-menu: 1.25rem;
-            --font-cta-button: 0.875rem;
-            --font-hero-title: 3rem;
-            --font-hero-subtitle: 1.125rem;
-            --font-section-title: 1.875rem;
-            --font-card-title: 1.125rem;
-            --font-body: 0.875rem;
-            --weight-logo: 700;
-            --weight-company-name: 500;
-            --weight-nav-menu: 400;
-        }
-
-        .logo-text {
-            font-size: var(--font-logo);
-            font-weight: var(--weight-logo);
-        }
-
-        .company-name {
-            font-size: var(--font-company-name);
-            font-weight: var(--weight-company-name);
-        }
-
-        .nav-menu {
-            font-size: var(--font-nav-menu);
-            font-weight: var(--weight-nav-menu);
-        }
-
-        header .container>div {
-            position: relative;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            opacity: 0;
-            transition: opacity 0.4s ease-in;
-        }
-
-        /* 侧边栏新样式：仅文字变色，无背景和加粗 */
-        .sidebar-link:hover {
-            color: var(--primary-color);
-        }
-
-        .sidebar-link.active {
-            color: var(--primary-color);
-        }
-
-        .job-card {
-            border: 1px solid #e5e7eb;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .job-card:hover {
-            border-color: #e5e7eb;
-            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.1);
-        }
-
-        .content-section {
-            padding-bottom: 2rem;
-        }
-
-        /* 针对公司介绍卡片，悬停时取消移动效果 */
-        #company-intro .card:hover {
-            transform: none;
-        }
-
-        /* 将滚动边距应用在标题上，以实现精确定位 */
-        .scroll-mt-24 {
-            scroll-margin-top: 6.5rem;
-        }
-
-        .home-icon img {
-            transition: filter 0.3s ease;
-            filter: invert(53%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(99%) contrast(85%);
-            /* Approximate gray-500 */
-        }
-
-        .home-icon:hover img {
-            filter: invert(53%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(99%) contrast(85%);
-            /* Approximate gray-500 */
-        }
-    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -140,18 +47,35 @@
         id="header">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
+                <!-- Left -->
                 <div class="flex items-center flex-1">
-                    <!-- 中文标题 -->
+                    <!-- Desktop Logo -->
                     <a href="index.html"
-                        class="text-gray-700 company-name transition hover-primary block md:inline">源踔科技</a>
-                    <!-- 英文标题 -->
+                        class="text-gray-700 company-name transition hover-primary hidden md:inline">源踔科技</a>
                     <a href="index.html"
-                        class="logo-text md:inline md:ml-2 block"
+                        class="logo-text md:inline md:ml-2 hidden md:block"
                         style="color: var(--primary-color)">Yestride</a>
+                    <!-- Mobile Back Button -->
+                    <a href="index.html" title="回到首页" class="home-icon md:hidden">
+                        <img src="images/svgs/返回首页.svg" alt="源踔科技-返回首页" class="h-6 w-6">
+                    </a>
                 </div>
-                <nav class="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2"></nav>
-                <div class="flex items-center space-x-3 flex-1 justify-end">
-                    <a href="index.html" title="回到首页" class="home-icon">
+
+                <!-- Center -->
+                <nav class="flex-grow">
+                    <!-- Mobile Navigation -->
+                    <div class="md:hidden flex items-center justify-center space-x-4">
+                        <a href="#company-intro" class="text-black-700 transition hover-primary nav-menu py-0">了解源踔</a>
+                        <a href="#join-us" class="text-black-700 transition hover-primary nav-menu py-0">加入我们</a>
+                    </div>
+                    <!-- Desktop Navigation (hidden placeholder) -->
+                    <div class="hidden md:flex space-x-8 justify-center"></div>
+                </nav>
+
+                <!-- Right -->
+                <div class="flex items-center flex-1 justify-end">
+                    <!-- Desktop Back Button -->
+                    <a href="index.html" title="回到首页" class="home-icon hidden md:block">
                         <img src="images/svgs/返回首页.svg" alt="源踔科技-返回首页" class="h-6 w-6">
                     </a>
                 </div>
@@ -178,7 +102,7 @@
 
             <main class="flex-1">
 
-                <div class="mb-8">
+                <div class="">
 
                     <img src="images/backs/about-1.webp" alt="源踔科技-团队合作" class="w-full">
 
