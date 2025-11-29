@@ -145,6 +145,11 @@ header .container>div {
         padding-top: 0 !important; /* Set padding-top to 0 for #about on mobile */
         padding-bottom: 3rem;
     }
+
+    #cases-indicators {
+        margin-top: 1rem; /* Ensure some space below carousel */
+        padding-bottom: 1rem; /* Ensure padding if carousel is at bottom of viewport */
+    }
 }
 /* Yestride 企业官网 - 全局样式 */
 
@@ -219,8 +224,8 @@ html {
 }
 
 .card:hover {
-    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15);
-    transform: translateY(-4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Revert to default shadow */
+    transform: translateY(0); /* Prevent movement */
 }
 
 /* 图标背景 */
@@ -251,11 +256,11 @@ html {
 
 /* Header 和 Footer 悬停效果 */
 header:hover {
-    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.1) !important;
+    box-shadow: none !important; /* Remove shadow on hover */
 }
 
 footer:hover {
-    box-shadow: 0 -4px 12px rgba(255, 107, 0, 0.1) !important;
+    box-shadow: none !important; /* Remove shadow on hover */
 }
 
 /* 图标悬停效果 */
@@ -269,36 +274,13 @@ footer:hover {
 
 .icon-container img {
     transition: all 0.3s ease;
-    /* 将任何颜色的图标转为黑色 */
-    filter: brightness(0) saturate(100%) opacity(0.8);
-}
-
-.card:hover .icon-container img {
-    /* 悬停时转为橙色 */
+    /* 默认橙色 */
     filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(346deg) brightness(104%) contrast(107%);
 }
 
-/* Hero区域数字统计悬停效果 */
 .stat-item:hover div {
-    color: var(--primary-color) !important;
-    cursor: pointer;
-}
-
-/* 主题色辅助类 */
-.text-primary {
-    color: var(--primary-color) !important;
-}
-
-.bg-primary {
-    background-color: var(--primary-color) !important;
-}
-
-.bg-primary-light {
-    background-color: var(--primary-light) !important;
-}
-
-.hover-primary:hover {
-    color: var(--primary-color) !important;
+    color: inherit !important; /* Prevent color change on hover */
+    cursor: default; /* Remove pointer cursor */
 }
 
 /* 案例卡片样式 */
@@ -308,13 +290,13 @@ footer:hover {
     padding: 0;
     overflow: visible;
     transition: all 0.3s ease;
-    cursor: pointer;
+    cursor: default; /* Remove pointer cursor */
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .case-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15);
+    transform: translateY(0); /* Prevent movement */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Revert to default shadow */
 }
 
 .case-card .relative {
@@ -322,17 +304,9 @@ footer:hover {
     overflow: hidden;
 }
 
-.case-card h3 {
-    padding: 0 1.5rem;
-}
-
-.case-card p {
-    padding: 0 1.5rem 1rem;
-}
-
-/* 16:9 宽屏比例 */
-.aspect-video {
-    aspect-ratio: 16 / 9;
+.case-card .relative img {
+    transition: transform 0.3s ease; /* Keep transition for smooth initial load */
+    transform: scale(1); /* Prevent scaling */
 }
 
 /* 案例轮播导航按钮 */
@@ -341,81 +315,39 @@ footer:hover {
 }
 
 .cases-nav-btn:hover {
-    box-shadow: 0 6px 30px rgba(255, 107, 0, 0.25);
+    box-shadow: none; /* Remove shadow on hover */
 }
 
 .cases-nav-btn:active {
-    box-shadow: 0 8px 40px rgba(255, 107, 0, 0.4);
+    box-shadow: none; /* Remove shadow on active */
 }
 
 .cases-nav-btn .absolute {
-    background: linear-gradient(135deg, var(--primary-color), #ff8c3a);
+    background: linear-gradient(135deg, var(--primary-color), #ff8c3a); /* Default to orange gradient */
 }
 
 .cases-nav-btn:hover .absolute {
-    background: linear-gradient(135deg, #ff8c3a, var(--primary-color));
+    background: linear-gradient(135deg, var(--primary-color), #ff8c3a); /* Prevent gradient change on hover */
+}
+
+/* Active navigation button for mobile carousel */
+.cases-nav-btn.active-nav-btn .absolute {
+    background: linear: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
 }
 
 /* 案例指示器样式 - 简洁圆点 */
-#cases-indicators {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-#cases-indicators .indicator {
-    width: 8px;
-    height: 8px;
-    background: #D1D5DB;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#cases-indicators .indicator.active {
-    background: var(--primary-color);
-    width: 10px;
-    height: 10px;
-}
-
-#cases-indicators .indicator:hover:not(.active) {
-    background: #9CA3AF;
-}
-
-/* 响应式 */
-@media (max-width: 768px) {
-    header {
-        /* padding-top: 1.5rem; */ /* 为移动端header添加顶部内边距，防止被系统UI遮挡 */
-    }
-    .container {
-        padding: 0 1rem;
-    }
-    
-    h1 {
-        font-size: 2rem !important;
-    }
-    
-    h2 {
-        font-size: 1.75rem !important;
-    }
-    
-    .case-card:hover {
-        transform: translateY(-4px);
-    }
-}
 
 /* Brand Logo Hover Effect */
 .brand-logo {
-    filter: grayscale(100%);
+    filter: grayscale(0%); /* Default to color */
     transition: all 0.3s ease;
     border-radius: 8px; /* Match the shadow shape */
 }
 
 .brand-logo-row.active .brand-logo,
 .brand-logo-row:hover .brand-logo {
-    filter: grayscale(0%);
-    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15);
+    filter: grayscale(0%); /* Prevent grayscale change on hover */
+    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15); /* Keep shadow on hover */
 }
 
 /* Tech Stack hover effect */
@@ -424,7 +356,7 @@ footer:hover {
 }
 
 .tech-stack-section:hover .tech-item > div:first-child {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Keep default lit */
 }
 
 /* Visually hide content while keeping it accessible */

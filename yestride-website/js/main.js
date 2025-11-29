@@ -82,6 +82,8 @@ function initCasesCarousel() {
     const prevBtn = document.getElementById('cases-prev');
     const nextBtn = document.getElementById('cases-next');
     const indicators = document.getElementById('cases-indicators');
+    const prevBtnMobile = document.getElementById('cases-prev-mobile'); // New
+    const nextBtnMobile = document.getElementById('cases-next-mobile'); // New
 
     if (!container || !wrapper) return;
 
@@ -142,6 +144,27 @@ function initCasesCarousel() {
         }
         if (nextBtn) {
             nextBtn.style.display = (isMobile || currentIndex >= totalCards - itemsPerPage) ? 'none' : 'flex';
+        }
+        // Update Mobile Fallback Buttons
+        if (prevBtnMobile) {
+            const canGoPrev = (isMobile && currentIndex > 0);
+            prevBtnMobile.style.display = canGoPrev ? 'flex' : 'none';
+            // Add color logic for mobile buttons
+            if (canGoPrev) {
+                prevBtnMobile.classList.add('active-nav-btn');
+            } else {
+                prevBtnMobile.classList.remove('active-nav-btn');
+            }
+        }
+        if (nextBtnMobile) {
+            const canGoNext = (isMobile && currentIndex < totalCards - itemsPerPage);
+            nextBtnMobile.style.display = canGoNext ? 'flex' : 'none';
+            // Add color logic for mobile buttons
+            if (canGoNext) {
+                nextBtnMobile.classList.add('active-nav-btn');
+            } else {
+                nextBtnMobile.classList.remove('active-nav-btn');
+            }
         }
     }
 
@@ -256,11 +279,31 @@ function initCasesCarousel() {
         setPositionByIndex();
         updateButtonsAndIndicators();
     }
+
+    // New slideMobile function for the fallback buttons
+    function slideMobile(direction) {
+        const isMobile = window.innerWidth < 768;
+        if (!isMobile) return; // Only for mobile
+
+        let increment = direction === 'next' ? 1 : -1;
+        let newIndex = currentIndex + increment;
+
+        if (newIndex < 0) {
+            newIndex = 0;
+        } else if (newIndex > totalCards - itemsPerPage) {
+            newIndex = totalCards - itemsPerPage;
+        }
+
+        currentIndex = newIndex;
+        wrapper.classList.add('transition-transform', 'duration-300', 'ease-in-out');
+        setPositionByIndex();
+        updateButtonsAndIndicators();
+    }
     
     // Attach Listeners
     cards.forEach((card, index) => {
         card.addEventListener('touchstart', touchStart(index), { passive: true });
-        card.addEventListener('touchmove', touchMove, { passive: true });
+        card.addEventListener('touchmove', touchMove);
         card.addEventListener('touchend', touchEnd);
     });
 
@@ -269,6 +312,13 @@ function initCasesCarousel() {
     }
     if (nextBtn) {
         nextBtn.addEventListener('click', () => slide('next'));
+    }
+    // Attach listeners for mobile fallback buttons
+    if (prevBtnMobile) {
+        prevBtnMobile.addEventListener('click', () => slideMobile('prev'));
+    }
+    if (nextBtnMobile) {
+        nextBtnMobile.addEventListener('click', () => slideMobile('next'));
     }
 
     // Initial Setup

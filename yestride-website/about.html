@@ -49,9 +49,13 @@
             <div class="flex justify-between items-center">
                 <!-- Left -->
                 <div class="flex items-center flex-1 md:hidden">
-                    <!-- This div will contain the mobile links -->
+                    <!-- Mobile Back Button -->
+                    <a href="index.html" title="回到首页" class="home-icon">
+                        <img src="images/svgs/返回首页.svg" alt="源踔科技-返回首页" class="h-6 w-6">
+                    </a>
+                    <!-- Mobile Nav Links (on the right, growing to fill space) -->
                     <nav class="flex-grow">
-                        <div class="flex items-center justify-center space-x-4">
+                        <div class="flex items-center justify-end space-x-4 text-sm"> <!-- text-sm for smaller mobile font -->
                             <a href="#company-intro" class="text-black-700 transition hover-primary nav-menu py-0">了解源踔</a>
                             <a href="#join-us" class="text-black-700 transition hover-primary nav-menu py-0">加入我们</a>
                         </div>
@@ -88,7 +92,7 @@
     <div class="container mx-auto px-4 pt-0 pb-12">
         <div class="flex flex-col md:flex-row md:space-x-12">
 
-            <aside class="w-full md:w-40 md:flex-shrink-0 mb-8 md:mb-0">
+            <aside class="w-full md:w-40 md:flex-shrink-0 mb-8 md:mb-0 hidden md:block">
                 <nav class="sticky top-24">
                     <ul class="space-y-2">
                         <li><a href="#company-intro"
@@ -112,7 +116,7 @@
 
 
                 <section id="company-intro" class="content-section">
-                    <h1 class="text-3xl font-bold border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500 my-8">了解源踔
+                    <h1 class="text-3xl font-bold border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500 my-4">了解源踔
                     </h1>
                     <div class="card space-y-4 text-black-500 leading-relaxed">
                         <p>
@@ -141,7 +145,7 @@
                 </section>
 
                 <section id="join-us" class="content-section">
-                    <h2 class="text-3xl font-bold border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500 my-8">加入我们
+                    <h2 class="text-3xl font-bold border-l-4 border-gray-500 pl-4 scroll-mt-24 text-gray-500 my-4">加入我们
                     </h2>
                     <div class="space-y-8">
                         <div class="job-card bg-white">

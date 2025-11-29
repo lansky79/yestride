@@ -96,7 +96,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative">
-        <div class="container mx-auto px-4 text-center">
+        <div class="container mx-auto px-1 md:px-4 text-center">
             <!-- NEW Badge -->
             <div class="inline-flex items-center text-white text-xs px-3 py-1 rounded-full mb-6"
                 style="background-color: var(--primary-color)">
@@ -105,7 +105,7 @@
             </div>
 
             <!-- Main Heading -->
-            <h1 class="text-2xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 class="md:text-5xl font-bold text-gray-900 mb-6 text-center text-[0.5rem] whitespace-nowrap">
                 源踔科技｜AI软硬件解决方案专家
             </h1>
 
@@ -132,31 +132,31 @@
     </section>
 
     <!-- Tech Stack Section -->
-    <div class="tech-stack-section py-8">
+    <div class="tech-stack-section py-8 border-b-2 border-primary-500 md:border-b-0">
         <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            <div class="flex flex-wrap justify-center items-center gap-2 md:gap-12">
                 <div class="flex items-center tech-item">
                     <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
-                    <span class="text-black-500 font-medium">AI大模型</span>
+                    <span class="text-black-500 font-medium text-xs md:text-base">AI大模型</span>
                 </div>
                 <div class="flex items-center tech-item">
                     <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
-                    <span class="text-black-500 font-medium">物联网技术</span>
+                    <span class="text-black-500 font-medium text-xs md:text-base">物联网技术</span>
                 </div>
                 <div class="flex items-center tech-item">
                     <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
-                    <span class="text-black-500 font-medium">大数据分析</span>
+                    <span class="text-black-500 font-medium text-xs md:text-base">大数据分析</span>
                 </div>
                 <div class="flex items-center tech-item">
                     <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
-                    <span class="text-black-500 font-medium">视觉计算</span>
+                    <span class="text-black-500 font-medium text-xs md:text-base">视觉计算</span>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Products Section -->
-    <section id="products">
+    <section id="products" class="border-b-2 border-primary-500 md:border-b-0">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">产品与服务</h2>
 
@@ -223,7 +223,7 @@
     </section>
 
     <!-- Cases Section -->
-    <section id="cases">
+    <section id="cases" class="border-b-2 border-primary-500 md:border-b-0">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">案例展示</h2>
 
@@ -412,6 +412,26 @@
             <!-- 指示器（可选） -->
             <div id="cases-indicators" class="flex justify-center mt-8 gap-2">
                 <!-- 动态生成 -->
+            </div>
+
+            <!-- Mobile Fallback Nav Buttons -->
+            <div class="flex justify-center mt-4 space-x-4 md:hidden">
+                <button id="cases-prev-mobile"
+                    class="cases-nav-btn w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group">
+                    <div class="absolute inset-0 rounded-full transition-all duration-300"></div>
+                    <svg class="w-6 h-6 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button id="cases-next-mobile"
+                    class="cases-nav-btn w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group">
+                    <div class="absolute inset-0 rounded-full transition-all duration-300"></div>
+                    <svg class="w-6 h-6 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
