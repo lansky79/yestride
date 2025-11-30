@@ -43,65 +43,31 @@
 
 <body class="font-inter bg-gray-50">
     <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 hover:shadow-md"
-        id="header">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 hover:shadow-md" id="header">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
-                <!-- Left -->
-                <div class="flex items-center flex-1 md:hidden">
-                    <!-- This div will contain the mobile links -->
-                    <nav class="flex-grow">
-                        <div class="flex items-center justify-center space-x-4">
-                            <a href="#company-intro" class="text-black-700 transition hover-primary nav-menu py-0">了解源踔</a>
-                            <a href="#join-us" class="text-black-700 transition hover-primary nav-menu py-0">加入我们</a>
-                        </div>
-                    </nav>
-                </div>
+                <!-- Left: Empty -->
+                <div class="flex-1"></div>
 
-                <!-- Desktop Left Logo -->
-                <div class="hidden md:flex items-center flex-1">
-                    <a href="index.html"
-                        class="text-gray-700 company-name transition hover-primary hidden md:inline">源踔科技</a>
-                    <a href="index.html"
-                        class="logo-text md:inline md:ml-2 hidden md:block"
-                        style="color: var(--primary-color)">Yestride</a>
-                </div>
-
-                <!-- Center -->
-                <nav class="flex-grow hidden md:flex">
-                    <!-- Desktop Navigation -->
-                    <div class="hidden md:flex space-x-8 justify-center"></div>
+                <!-- Center: Navigation -->
+                <nav class="flex space-x-8">
+                    <a href="#company-intro" class="text-black-700 transition hover-primary nav-menu">了解源踔</a>
+                    <a href="#join-us" class="text-black-700 transition hover-primary nav-menu">加入我们</a>
                 </nav>
 
-                <!-- Right -->
-                <div class="flex items-center flex-1 justify-end hidden md:flex">
-                    <!-- Desktop Back Button -->
-                    <a href="index.html" title="回到首页" class="home-icon hidden md:block">
-                        <img src="images/svgs/返回首页.svg" alt="源踔科技-返回首页" class="h-6 w-6">
-                    </a>
+                <!-- Right: Back Button -->
+                <div class="flex-1 flex justify-end">
+                    <a href="index.html" class="text-black-700 transition hover-primary">返回首页</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content with Sidebar -->
-    <div class="container mx-auto px-4 pt-0 pb-12">
-        <div class="flex flex-col md:flex-row md:space-x-12">
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 pb-12">
+        <div class="flex justify-center">
 
-            <aside class="w-full md:w-40 md:flex-shrink-0 mb-8 md:mb-0">
-                <nav class="sticky top-24">
-                    <ul class="space-y-2">
-                        <li><a href="#company-intro"
-                                class="sidebar-link block px-0 py-2 text-black-700 transition-colors duration-200">了解源踔</a>
-                        </li>
-                        <li><a href="#join-us"
-                                class="sidebar-link block px-0 py-2 text-black-700 transition-colors duration-200">加入我们</a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-
-            <main class="flex-1">
+            <main class="flex-1 max-w-4xl">
 
                 <div class="">
 
@@ -135,7 +101,7 @@
 
                         </p>
                         <p>
-                            如果你希望在真实场景中，与高能队友（包括人类与 AI）一起，在创造外部价值的同时，持续拓展自己的能力边界，欢迎加入我们。
+                            以上是我们就 AI 如何重塑生产力与人才标准的观点，亦体现源踔的理念，供您在应聘前了解。
                         </p>
                     </div>
                 </section>
@@ -234,56 +200,6 @@
     <script>
         window.addEventListener('load', function () {
             document.body.style.opacity = '1';
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('.content-section');
-            const sidebarLinks = document.querySelectorAll('.sidebar-link');
-
-            if (sidebarLinks.length === 0) return;
-
-            const activateLink = (id) => {
-                sidebarLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    }
-                });
-            };
-
-            sidebarLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetTitle = document.querySelector(`${targetId} h1`) || document.querySelector(`${targetId} h2`);
-                    if (targetTitle) {
-                        targetTitle.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        activateLink(entry.target.id);
-                    }
-                });
-            }, {
-                rootMargin: '-100px 0px -60% 0px'
-            });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            if (window.location.hash) {
-                activateLink(window.location.hash.substring(1));
-            } else if (sections.length > 0) {
-                activateLink(sections[0].id);
-            }
         });
     </script>
 </body>
