@@ -440,10 +440,10 @@ footer:hover {
     .mobile-tech-dot {
         width: 0.35rem; /* 5.6px */
         height: 0.35rem; /* 5.6px */
-        margin-right: 0.1rem; /* 1.6px */
+        margin-right: 0.05rem; /* 0.8px */
     }
     .mobile-tech-text {
-        font-size: 0.5rem; /* 8px */
+        font-size: 0.45rem; /* 7.2px */
         font-weight: normal; /* remove bold if any */
     }
     /* Stat Labels specific adjustments */
@@ -472,7 +472,7 @@ footer:hover {
 }
 
 .tech-item:hover > div:first-child {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
 }
 
 /* Visually hide content while keeping it accessible */
@@ -522,5 +522,5 @@ footer:hover {
 
 .card.about-card:hover { /* Increased specificity */
     box-shadow: 0 8px 24px rgba(255, 190, 0, 0.25); /* Lighter orange shadow */
-    transform: none !important;
+    transform: translateY(0) !important;
 }
