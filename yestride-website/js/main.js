@@ -61,19 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cases Carousel (案例轮播)
     initCasesCarousel();
 
-    // About Us section image hover effect
-    const aboutSectionGrid = document.querySelector('#about .grid');
-    const brandLogoRow = document.querySelector('#about .brand-logo-row');
+    // About Us section image hover effect is now handled by Tailwind CSS peer-hover
 
-    if (aboutSectionGrid && brandLogoRow) {
-        aboutSectionGrid.addEventListener('mouseenter', () => {
-            brandLogoRow.classList.add('active');
-        });
-
-        aboutSectionGrid.addEventListener('mouseleave', () => {
-            brandLogoRow.classList.remove('active');
-        });
-    }
 });
 
 function initCasesCarousel() {
