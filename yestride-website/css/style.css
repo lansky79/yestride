@@ -438,8 +438,8 @@ footer:hover {
 
     /* Tech Stack specific adjustments */
     .mobile-tech-dot {
-        width: 0.35rem; /* 5.6px */
-        height: 0.35rem; /* 5.6px */
+        width: 0.2rem; /* 3.2px */
+        height: 0.2rem; /* 3.2px */
         margin-right: 0.05rem; /* 0.8px */
     }
     .mobile-tech-text {
@@ -451,16 +451,15 @@ footer:hover {
         font-size: 0.5rem; /* 8px */
     }
 
-/* Brand Logo Hover Effect */
+/* Brand Logo Hover Effect (Card Hover) */
+/* This works with the JS that adds the '.active' class to the logo row */
 .brand-logo {
-    filter: grayscale(100%) !important; /* Added !important */
     transition: all 0.3s ease;
     border-radius: 8px; /* Match the shadow shape */
 }
 
 @media (min-width: 769px) {
-    .brand-logo-row.active .brand-logo,
-    .brand-logo-row:hover .brand-logo {
+    .brand-logo-row.active .brand-logo {
         filter: grayscale(0%);
         box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15);
     }
